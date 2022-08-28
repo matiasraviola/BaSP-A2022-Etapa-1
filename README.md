@@ -1,11 +1,9 @@
 # Trackgenix
 - Description
-    Trackgenix is a web system when you can create new projects with your team. Everybody can update all the hours they are working on the differents project.
-
-
-que facilite el registro de horas trabajadas de cada empleado en cada proyecto y equipo de trabajo.
-
-explicar modifciarciones de admin?
+    Trackgenix is ​​a web system where you can create new projects with your team. Everyone can update all the
+    hours they are working, on the different projects in an easy and simple way and provides information to the companies so they can make better decisions.
+    
+    To create Trackgenix as it will look like, we use Figma to create the layout and screenflow we want, Git and Github to create all the repositorie and all the page code are write with HTML5.
 
 
 - How to open
@@ -14,17 +12,20 @@ explicar modifciarciones de admin?
 
 - How tu use
 1- sing up/login with your account
+2- you will be see all the projects you have if you click one you can charge all the hours you worked in that | project.
 
 
 
 - About GigaTech Software Solutions SA
+    Provides software development services to other companies, which have too many employees. Because of this "Trackgenix" was created.
 
-provee servicios de desarrollo de software a otras compañías
+
 ### Week 02
-Description what we have done
+-------We ready the lanndind
 ### Week 03
 Description what we have done
 
 
 Copyright © 2022 Radium Rocket. All right reserved
-_By Author_
+
+_By Matías Raviola_
