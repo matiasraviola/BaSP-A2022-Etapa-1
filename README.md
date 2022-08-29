@@ -2,7 +2,7 @@
 - Description
     Trackgenix is ​​a web system where you can create new projects with your team. Everyone can update all the
     hours they are working, on the different projects in an easy and simple way and provides information to the companies so they can make better decisions.
-    
+
     To create Trackgenix as it will look like, we use Figma to create the layout and screenflow we want, Git and Github to create all the repositorie and all the page code are write with HTML5.
 
 
@@ -21,9 +21,8 @@
 
 
 ### Week 02
--------We ready the lanndind
-### Week 03
-Description what we have done
+We write the html code for the web page, we also create a repositorie to keep safe all the versions we made abour this web page and config everything to have a remote repositorie with github and started to create this file too.
+
 
 
 Copyright © 2022 Radium Rocket. All right reserved
