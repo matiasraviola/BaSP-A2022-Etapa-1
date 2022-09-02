@@ -20,10 +20,10 @@
     Provides software development services to other companies, which have too many employees. Because of this "Trackgenix" was created.
 
 
-### Week 02
+### Week 01
 We write the html code for the web page, we also create a repositorie to keep safe all the versions we made abour this web page and config everything to have a remote repositorie with github and started to create this file too.
 
-
+### Week 03
 
 Copyright © 2022 Radium Rocket. All right reserved
 
