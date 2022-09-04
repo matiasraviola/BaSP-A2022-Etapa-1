@@ -28,7 +28,7 @@ header{
 #text-container h1{
     font:bold 40px Arial, Helvetica, sans-serif;
     margin-right: 2px;
-    margin-left: 50px;
+    margin-left: 100px;
     line-height: 30px;
     padding-bottom: 10px;
     border-bottom: 3px rgb(170,206,155) solid; 
@@ -37,7 +37,7 @@ header{
 #text-container h2{
     font:normal 20px Arial, Helvetica, sans-serif; 
     margin-right: 2px;
-    margin-left: 50px;
+    margin-left: 100px;
     line-height: 30px;   
     margin-top: 20px;
 }
@@ -45,7 +45,7 @@ header{
     color: rgba(255,255,255,0.75);
     font:normal 16px Arial, Helvetica, sans-serif;
     margin-right: 2px;
-    margin-left: 50px;
+    margin-left: 100px;
     line-height: 30px;
     margin-top: 100px;
     }
@@ -55,14 +55,14 @@ header{
     font:bold 40px Arial, Helvetica, sans-serif;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
-    margin-left: 50px;
+    margin-left: 100px;
     margin-bottom: 20px;
 }
 .main-text-container p{
     text-align: center;
     font:normal 18px Arial, Helvetica, sans-serif;
     width: 1200px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-right:150px;
     padding-top: 35px;
     padding-bottom: 5px;
@@ -80,14 +80,14 @@ header{
     text-align: left;
     width: 1000px;
     margin-top: 200px ;
-    margin-left: 50px;
+    margin-left: 100px;
     border-bottom: 4px rgba(40, 98, 118, 1) solid;
 }
 .left-paragraph p{
     font:normal 30px Arial, Helvetica, sans-serif;
     text-align: left;
     width: 550px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 .left-paragraph img{
     margin-left: 750px;
@@ -117,20 +117,80 @@ header{
 }
 .right-paragraph img{
     margin-top: -350px;
-    margin-left: 30px;
+    margin-left: 100px;
 }
 #functionalities-area h2{
-    width: 1200px;
+    width: 1300px;
     text-align: center;
     font:bold 40px Arial, Helvetica, sans-serif;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-bottom: 20px;
+}
+#functionalities-area h3{
+    font:bold 30px Arial, Helvetica, sans-serif;
+}
+#functionalities-area p{
+    font:bold 20px Arial, Helvetica, sans-serif;
+}
+.hourslog-text {
+    width: 400px;
+    margin-left: 300px;
+    margin-top: 100px;
+    
+}
+.hourslog-text p{
+    padding-top: 20px;
+}
+.hourslog-text img {
+    width: 150px;
+    margin-left: -170px;
+    margin-top: -200px ;
+    padding-top: 50px;
+}
+.resourcemanag-text{
+    width: 400px;
+    margin-top: -140px;
+    margin-left: 1000px;
+}
+.resourcemanag-text p{
+    padding-top: 20px;
+}
+.resourcemanag-text img{
+    margin-top: -200px;
+    margin-left: -170px ;
+    padding-top: 50px;
+}
+.reports-text{
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 300px;
+    padding-top: 100px;
+}
+.reports-text p{
+    padding-top: 20px;
+}
+.reports-text img{
+    width: 150px;
+    margin-top: -150px;
+    margin-left: -170px;
 
 }
-
+.multiplerole-text{
+    width: 400px;   
+    margin-top: -150px; 
+    margin-left: 1000px;
+}
+.multiplerole-text p{
+    padding-top: 20px;
+}
+.multiplerole-text img{
+    margin-top: -200px;
+    margin-left: -170px ;
+    padding-top: 50px;
+}
 
 
 
