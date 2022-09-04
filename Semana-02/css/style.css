@@ -44,13 +44,14 @@ header{
 #text-container p{ 
     color: rgba(255,255,255,0.75);
     font:normal 16px Arial, Helvetica, sans-serif;
+    margin-top: 100px;
     margin-right: 2px;
     margin-left: 100px;
     line-height: 30px;
-    margin-top: 100px;
+    
     }
 .main-text-container h2{
-    width: 1200px;
+    width: 1176px;
     text-align: center;
     font:bold 40px Arial, Helvetica, sans-serif;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
@@ -90,7 +91,7 @@ header{
     margin-left: 100px;
 }
 .left-paragraph img{
-    margin-left: 750px;
+    margin-left: 800px;
     margin-top: -400px ;
 }
 .right-paragraph {
@@ -120,13 +121,13 @@ header{
     margin-left: 100px;
 }
 #functionalities-area h2{
-    width: 1300px;
+    width: 1176px;
     text-align: center;
     font:bold 40px Arial, Helvetica, sans-serif;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-bottom: 20px;
 }
 #functionalities-area h3{
@@ -190,11 +191,104 @@ header{
     margin-top: -200px;
     margin-left: -170px ;
     padding-top: 50px;
+
+}
+#contact-area {
+    font:medium 14px Arial, Helvetica, sans-serif;
+}
+#contact-area h2{
+    width: 1176px;
+    text-align: center;
+    font:bold 40px Arial, Helvetica, sans-serif;
+    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
+    color:rgba(0, 0, 0, 1);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.contact-area-name label{
+    color: rgba(55, 56, 103, 1);
+    margin-top: -10px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.contact-area-name input{
+    width: 450px;
+    height: 37px;
+    margin-top: 100px;
+    margin-left: -30px;
+}
+.contact-area-ca{
+    color: rgba(55, 56, 103, 1);
+    width: 150px;
+    height: 16px;
+    margin-top: -40px;
+}
+.contact-area-ca select{
+    color: rgba(55, 56, 103, 1);
+    width: 450px;
+    height: 37px;
+   
+    margin-left: 800px;
+}
+.contact-area-email{
+    color: rgba(55, 56, 103, 1);
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.contact-area-email input{
+    width: 450px;
+    height: 37px;
+    margin-top: 50px;
+
+}
+.contact-area-message{
+    color: rgba(55, 56, 103, 1);
+    margin-left: 100px;
+}
+#categories-area {
+    background-image: url(../assets/img.png/list-picture.png);
+    background-position:center left;
+    background-repeat: no-repeat;
+    font:normal 20px Arial, Helvetica, sans-serif;
+    color:rgba(55, 56, 103, 1);
+    margin-top: 10px;
+
+}
+#categories-area h4{
+    margin-left: 25px;
+}
+#categories-area ol{
+    font:normal 10px Arial, Helvetica, sans-serif;
+}
+.categories-area-product {
+    Width:180px;
+    Height:110px;
+    padding-top: 200px;
+    margin-left: 474px;
+}
+.categories-area-enterprise {
+    Width:180px;
+    Height:110px;
+    margin-top: -110px;
+    margin-left: 650px;
+    padding-top: -20px;
+
+}
+.categories-area-support{
+    Width:180px;
+    Height:110px;
+    margin-left: 850px;
+    margin-top: -110px;
+    padding-top: -20px;
+    padding-bottom: 100px;
+}
+footer{
+    background-color: rgba(170, 206, 155, 1);
+    width: 1440px;
+    height: 176px;
 }
 
-
-
-/*-------1 SIDE BAR--------
 #sidebar{
     width: 160px;
     height:1400px;
