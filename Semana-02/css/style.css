@@ -35,7 +35,7 @@ header{
     width: 110%;
 }  
 #text-container h2{
-    font:normal 20px Arial, Helvetica, sans-serif;  
+    font:normal 20px Arial, Helvetica, sans-serif; 
     margin-right: 2px;
     margin-left: 50px;
     line-height: 30px;   
@@ -50,19 +50,26 @@ header{
     margin-top: 100px;
     }
 .main-text-container h2{
-    width: 1440px;
+    width: 1200px;
     text-align: center;
-    font:normal 40px Arial, Helvetica, sans-serif;
+    font:bold 40px Arial, Helvetica, sans-serif;
+    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
+    margin-left: 50px;
 }
 .main-text-container p{
     text-align: center;
     font:normal 16px Arial, Helvetica, sans-serif;
-    width: 1176px;
-    margin-left:150px;
+    width: 1200px;
+    margin-left: 50px;
+    margin-right:150px;
+    padding-top: 35px;
+    padding-bottom: 5px;
 }
-
-
+.green-paragraph {
+    color: rgba(73, 163, 123, 1);
+    margin-bottom: 100px;
+}
 #sidebar{
     width: 160px;
     height:1400px;
