@@ -56,6 +56,7 @@ header{
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
     margin-left: 50px;
+    margin-bottom: ;
 }
 .main-text-container p{
     text-align: center;
@@ -69,6 +70,54 @@ header{
 .green-paragraph {
     color: rgba(73, 163, 123, 1);
     margin-bottom: 100px;
+}
+.left-paragraph {
+    color: rgba(0, 0, 0, 1);
+    width: 500px;
+}
+.left-paragraph h3{
+    font:bold 40px Arial, Helvetica, sans-serif;
+    text-align: left;
+    width: 1000px;
+    margin-top: 200px ;
+    margin-left: 50px;
+    border-bottom: 4px rgba(40, 98, 118, 1) solid;
+}
+.left-paragraph p{
+    font:normal 30px Arial, Helvetica, sans-serif;
+    text-align: left;
+    width: 550px;
+    margin-left: 50px;
+}
+.left-paragraph img{
+    margin-left: 750px;
+    margin-top: -400px ;
+}
+.right-paragraph {
+    background-color: rgba(217, 217, 217, 1);
+    width: 1440px;
+    height:900px;
+    margin-top: 150px ;
+
+}
+.right-paragraph h3{
+    font:bold 40px Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 800px;
+    margin-left: 560px;
+    margin-right: 600px;
+    padding-top: 300px ;
+    border-bottom: 4px rgba(255, 255, 255, 1) solid;
+}
+.right-paragraph p{
+    font:bold 30px Arial, Helvetica, sans-serif;
+    text-align: left;
+    width:550px;
+    margin-left: 800px;
+}
+.right-paragraph img{
+    margin-top: -350px;
+    margin-left: 30px;
 }
 #sidebar{
     width: 160px;
