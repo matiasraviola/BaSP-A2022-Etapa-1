@@ -5,24 +5,89 @@
 body, html{
     font-family: 'Roboto';
 }
-header{
-    background-image: url(../assets/Trackgenix.png);
-    background-position:center left;
-    background-repeat: no-repeat;
-    width: 1440px;
-    height:900px;
+#sidebar{
+    display: inline-block;
+    position:fixed;
+    width: 10%;
+    height: 982px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    color: rgba(241, 51, 18, 1);
+    float:left;
+
+
+}
+#sidebar img{
+    margin-bottom: 30px;
+}
+.home img{
+    margin: 0 0 0 0
+}
+.home h4{
+    margin-top: -55px;
+    margin-left: 30px;
+}
+.sign-up img{
+    margin-top:40px;
+}
+.sign-up h4{
+    margin-top: -55px;
+    margin-left: 30px;
+}
+.login img{
+    margin-top:40px;
+}
+.login h4{
+    margin-top: -55px;
+    margin-left: 30px;
+    margin-bottom: 250px;
+}
+.contact-us-email h4{
+    width: 80px;
+    border-bottom:2px solid ;
+}
+.contact-us-email img{
+    margin-top: 10px;
+}
+.contact-us-email h5{
+    margin-top: -55px;
+    margin-left: 30px;
+}
+.contact-us-phone img{
+    margin-top: 30px;
+}
+.contact-us-phone h5{
+    margin-top: -55px;
+    margin-left:30px;
+}
+.contact-us-address img{
+    margin-top: 30px;
+}
+  
+.contact-us-address h5{
+    width: 110px;
+    margin-top: -50px;
+    margin-left:30px;
 }
 #main-container {
     display: inline-block;
     margin-left: 10%;
 }
+header{
+    width: 1440px;
+    height:900px;
+    background-image: url(../assets/Trackgenix.png);
+    background-position:center left;
+    background-repeat: no-repeat;
+}
 .header-body {
-    color: rgb(255,255,255);
-    margin-left:150px ;
     height: 900px;
+    width: 500px;
+    margin-left:150px ;
     background-color: rgba(00, 00, 00, 0.5);
     backdrop-filter: blur(2px);
-    width: 500px;}
+    color: rgb(255,255,255);
+}
 #text-container{
     padding-left: 15px;
     padding-top: 150px;
@@ -30,95 +95,95 @@ header{
 }
 
 #text-container h1{
-    font:bold 40px Arial, Helvetica, sans-serif;
+    width: 110%;
     margin-right: 2px;
     margin-left: 100px;
-    line-height: 30px;
     padding-bottom: 10px;
     border-bottom: 3px rgb(170,206,155) solid; 
-    width: 110%;
+    line-height: 30px;
+    font:bold 40px Arial, Helvetica, sans-serif;
 }  
 #text-container h2{
-    font:normal 20px Arial, Helvetica, sans-serif; 
     margin-right: 2px;
     margin-left: 100px;
-    line-height: 30px;   
     margin-top: 20px;
+    font:normal 20px Arial, Helvetica, sans-serif; 
+    line-height: 30px;   
 }
 #text-container p{ 
-    color: rgba(255,255,255,0.75);
-    font:normal 16px Arial, Helvetica, sans-serif;
     margin-top: 100px;
     margin-right: 2px;
     margin-left: 100px;
+    color: rgba(255,255,255,0.75);
+    font:normal 16px Arial, Helvetica, sans-serif;
     line-height: 30px;
     
     }
 .main-text-container h2{
     width: 1176px;
-    text-align: center;
-    font:bold 40px Arial, Helvetica, sans-serif;
-    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
-    color:rgba(0, 0, 0, 1);
     margin-left: 100px;
     margin-bottom: 20px;
+    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
+    text-align: center;
+    font:bold 40px Arial, Helvetica, sans-serif;
+    color:rgba(0, 0, 0, 1);
 }
 .main-text-container p{
-    text-align: center;
-    font:normal 18px Arial, Helvetica, sans-serif;
     width: 1200px;
     margin-left: 100px;
     margin-right:150px;
     padding-top: 35px;
     padding-bottom: 5px;
+    text-align: center;
+    font:normal 18px Arial, Helvetica, sans-serif;
 }
 .green-paragraph {
-    color: rgba(73, 163, 123, 1);
     margin-bottom: 100px;
+    color: rgba(73, 163, 123, 1);
 }
 .left-paragraph {
-    color: rgba(0, 0, 0, 1);
     width: 500px;
+    color: rgba(0, 0, 0, 1); 
 }
 .left-paragraph h3{
-    font:bold 40px Arial, Helvetica, sans-serif;
-    text-align: left;
     width: 1000px;
     margin-top: 200px ;
     margin-left: 100px;
     border-bottom: 4px rgba(40, 98, 118, 1) solid;
+    font:bold 40px Arial, Helvetica, sans-serif;
+    text-align: left;
 }
 .left-paragraph p{
-    font:normal 30px Arial, Helvetica, sans-serif;
-    text-align: left;
     width: 550px;
     margin-left: 100px;
+    font:normal 30px Arial, Helvetica, sans-serif;
+    text-align: left;
 }
 .left-paragraph img{
     margin-left: 800px;
     margin-top: -400px ;
 }
 .right-paragraph {
-    background-color: rgba(217, 217, 217, 1);
     width: 1440px;
     height:900px;
     margin-top: 150px ;
+    background-color: rgba(217, 217, 217, 1);
 
 }
 .right-paragraph h3{
-    font:bold 40px Arial, Helvetica, sans-serif;
-    text-align: center;
     width: 800px;
     margin-left: 560px;
     margin-right: 600px;
     padding-top: 300px ;
     border-bottom: 4px rgba(255, 255, 255, 1) solid;
+    font:bold 40px Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 .right-paragraph p{
-    font:bold 30px Arial, Helvetica, sans-serif;
-    text-align: left;
     width:550px;
     margin-left: 800px;
+    font:bold 30px Arial, Helvetica, sans-serif;
+    text-align: left;
 }
 .right-paragraph img{
     margin-top: -350px;
@@ -126,13 +191,13 @@ header{
 }
 #functionalities-area h2{
     width: 1176px;
-    text-align: center;
-    font:bold 40px Arial, Helvetica, sans-serif;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
     margin-top: 50px;
     margin-left: 200px;
     margin-bottom: 20px;
+    text-align: center;
+    font:bold 40px Arial, Helvetica, sans-serif;
 }
 #functionalities-area h3{
     font:bold 30px Arial, Helvetica, sans-serif;
@@ -202,46 +267,45 @@ header{
 }
 #contact-area h2{
     width: 1176px;
-    text-align: center;
-    font:bold 40px Arial, Helvetica, sans-serif;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
-    color:rgba(0, 0, 0, 1);
     margin-top: 50px;
     margin-left: 100px;
     margin-bottom: 20px;
+    color:rgba(0, 0, 0, 1);
+    text-align: center;
+    font:bold 40px Arial, Helvetica, sans-serif;
 }
 .contact-area-name{
     width: 50px;
 }
 .contact-area-name label{
-    color: rgba(55, 56, 103, 1);
     margin-top: -10px;
     margin-left: 100px;
+    color: rgba(55, 56, 103, 1);
 }
 .contact-area-name input{
     Width:446px;
     Height:37px;
     margin-left: 100px;
     margin-top: 10px;
-
 }
 .contact-area-ca{
-    color: rgba(55, 56, 103, 1);
     width: 150px;
     height: 16px;
     margin-top: -40px;
+    color: rgba(55, 56, 103, 1);
 }
 .contact-area-ca select{
-    color: rgba(55, 56, 103, 1);
     Width:446px;
     Height:37px;
     margin-left: 800px;
+    color: rgba(55, 56, 103, 1);
 }
 .contact-area-email{
-    color: rgba(55, 56, 103, 1);
     margin-top: 50px;
     margin-left: 100px;
     width:50px;
+    color: rgba(55, 56, 103, 1);
 }
 .contact-area-email input{
     Width:446px;
@@ -250,36 +314,36 @@ header{
 
 }
 .contact-area-message{
-    color: rgba(55, 56, 103, 1);
     margin-left: 100px;
     width:50px;
     margin-top: 44px;
+    color: rgba(55, 56, 103, 1);
 }
 .contact-area-message textarea {
     Width:1029px;
     Height:179.57px;
 }
 .button-submit {
-    background-color: #AACE9B;
     Width:177px;
     Height:48px;
     margin-left: 100px;
+    background-color: #AACE9B;
 }
 .button-reset {
-    background-color: rgba(241, 51, 18, 1);
     Width:117px;
     Height:48px;
     margin-left: 740px;
+    background-color: rgba(241, 51, 18, 1);
 } 
 
 #categories-area {
+    width: 1440px;
+    margin-top: 10px;
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center left;
     background-repeat: no-repeat;
     font:normal 20px Arial, Helvetica, sans-serif;
     color:rgba(55, 56, 103, 1);
-    width: 1440px;
-    margin-top: 10px;
 
 }
 #categories-area h4{
@@ -311,9 +375,9 @@ header{
     padding-bottom: 100px;
 }
 footer{
-    background-color: rgba(170, 206, 155, 1);
     width: 1440px;
     height: 176px;
+    background-color: rgba(170, 206, 155, 1);
 }
 
 .footer-linked {
@@ -340,19 +404,9 @@ footer{
     
 }
 .footer-copyright{
+    margin-top: 50px;
+    margin-left: 60px;
     font:bold 12px Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 1);
     text-align: center;
-    margin-top: 50px;
-    margin-left: 60px;
 }
-
-#sidebar{
-    display: inline-block;
-    width: 10%;
-    float:left;
-    position:fixed;
-    background-color: #FFFFFF;
-
-}
-
