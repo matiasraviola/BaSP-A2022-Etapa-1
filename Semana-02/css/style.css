@@ -206,13 +206,20 @@ header{
     margin-left: 100px;
     margin-bottom: 20px;
 }
+.contact-area-name{
+    width: 50px;
+}
 .contact-area-name label{
     color: rgba(55, 56, 103, 1);
     margin-top: -10px;
+    margin-left: 100px;
 }
 .contact-area-name input{
-    width: 450px;
-    height: 37px;
+    Width:446px;
+    Height:37px;
+    margin-left: 100px;
+    margin-top: 10px;
+
 }
 .contact-area-ca{
     color: rgba(55, 56, 103, 1);
@@ -222,26 +229,45 @@ header{
 }
 .contact-area-ca select{
     color: rgba(55, 56, 103, 1);
-    width: 450px;
-    height: 37px;
-   
+    Width:446px;
+    Height:37px;
     margin-left: 800px;
 }
 .contact-area-email{
     color: rgba(55, 56, 103, 1);
     margin-top: 50px;
     margin-left: 100px;
+    width:50px;
 }
 .contact-area-email input{
-    width: 450px;
-    height: 37px;
-    margin-top: 50px;
+    Width:446px;
+    Height:37px;
+    margin-top: 10px;
 
 }
 .contact-area-message{
     color: rgba(55, 56, 103, 1);
     margin-left: 100px;
+    width:50px;
+    margin-top: 44px;
 }
+.contact-area-message textarea {
+    Width:1029px;
+    Height:179.57px;
+}
+.button-submit {
+    background-color: #AACE9B;
+    Width:177px;
+    Height:48px;
+    margin-left: 100px;
+}
+.button-reset {
+    background-color: rgba(241, 51, 18, 1);
+    Width:117px;
+    Height:48px;
+    margin-left: 740px;
+} 
+
 #categories-area {
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center left;
@@ -324,3 +350,4 @@ footer{
     position:fixed;
     background-color: #FFFFFF;
 }
+
