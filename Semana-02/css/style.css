@@ -1,6 +1,5 @@
 *{
     margin:0px;
-
 }
 body, html{
     font-family: 'Roboto';
@@ -14,8 +13,6 @@ body, html{
     background-color: #FFFFFF;
     color: rgba(241, 51, 18, 1);
     float:left;
-
-
 }
 #sidebar img{
     margin-bottom: 30px;
@@ -117,8 +114,7 @@ header{
     color: rgba(255,255,255,0.75);
     font:normal 16px Arial, Helvetica, sans-serif;
     line-height: 30px;
-    
-    }
+}
 .main-text-container h2{
     width: 1176px;
     margin-left: 100px;
@@ -168,7 +164,6 @@ header{
     height:900px;
     margin-top: 150px ;
     background-color: rgba(217, 217, 217, 1);
-
 }
 .right-paragraph h3{
     width: 800px;
@@ -208,8 +203,7 @@ header{
 .hourslog-text {
     width: 400px;
     margin-left: 300px;
-    margin-top: 100px;
-    
+    margin-top: 100px;   
 }
 .hourslog-text p{
     padding-top: 20px;
@@ -246,7 +240,6 @@ header{
     width: 150px;
     margin-top: -150px;
     margin-left: -170px;
-
 }
 .multiplerole-text{
     width: 400px;   
@@ -260,7 +253,6 @@ header{
     margin-top: -200px;
     margin-left: -170px ;
     padding-top: 50px;
-
 }
 #contact-area {
     font:medium 14px Arial, Helvetica, sans-serif;
@@ -311,7 +303,6 @@ header{
     Width:446px;
     Height:37px;
     margin-top: 10px;
-
 }
 .contact-area-message{
     margin-left: 100px;
@@ -335,7 +326,6 @@ header{
     margin-left: 740px;
     background-color: rgba(241, 51, 18, 1);
 } 
-
 #categories-area {
     width: 1440px;
     margin-top: 10px;
@@ -344,7 +334,6 @@ header{
     background-repeat: no-repeat;
     font:normal 20px Arial, Helvetica, sans-serif;
     color:rgba(55, 56, 103, 1);
-
 }
 #categories-area h4{
     margin-left: 25px;
@@ -364,7 +353,6 @@ header{
     margin-top: -110px;
     margin-left: 650px;
     padding-top: -20px;
-
 }
 .categories-area-support{
     Width:180px;
@@ -383,8 +371,7 @@ footer{
 .footer-linked {
     margin-top: -82px;
     margin-left: 480px;
-    padding-top: 40px;
-    
+    padding-top: 40px;  
 }
 .footer-facebook {
     padding-left: 600px;
@@ -400,8 +387,7 @@ footer{
 }
 .footer-github {
     margin-left: 960px;
-    margin-top: -43px;
-    
+    margin-top: -43px; 
 }
 .footer-copyright{
     margin-top: 50px;
