@@ -7,7 +7,7 @@
         <title>Trackgenix</title>
         <link rel="style-reset" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-    
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <header>
@@ -143,8 +143,8 @@
                         <label>Message</label>
                         <textarea name="message" placeholder="Your Message Here"></textarea>
                     </div>
-                    <input type="submit" name="Submit" value="Send Message">
-                    <button>Reset</button>
+                    <input class="button-submit" type="submit" name="Submit" value="Send Message">
+                    <input class="button-reset" type="reset" name="Reset" value="Reset">
                 </form>
             </section>
             <section id="categories-area">
@@ -179,14 +179,18 @@
         </main>
         <aside id="sidebar">
                 <nav>
-                    <img src="assets\icons\home-icon.png" alt="home">
-                    <h4>Home</h4>
-
-                    <img src="assets\icons\person.png" alt="person">
-                    <h4>Sign Up</h4>
-
-                    <img src="assets\icons\person.png" alt="person">
-                    <h4>Login</h4>
+                    <a>
+                        <img src="assets\icons\home-icon.png" alt="home">
+                        <h4>Home</h4>
+                    </a>
+                    <a>
+                        <img src="assets\icons\person.png" alt="person">
+                        <h4>Sign Up</h4>
+                    </a>
+                    <a>
+                        <img src="assets\icons\person.png" alt="person">
+                        <h4>Login</h4>
+                    </a>
                 </nav>
                 <div>
                 <h4>Contact Us</h4>
@@ -201,28 +205,37 @@
                 <h5>1234 Somewhere Road #8254 Nashville,TN 00000-0000</h5>
         </aside>
         <footer>
-            <div>
-                <div>
+            
+            <div class="footer-linked">
+                <a href="https://ar.linkedin.com/" target="_blank">
                     <img src="assets\icons\linkedIn-logo.png" alt="Linked In">
-                    <a href="https://ar.linkedin.com/" target="_blank">LinkedIn</a>
-                </div>
-                <div>
-                    <img src="assets\icons\facebook-logo.png" alt="Facebook">
-                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                </div>
-                    <img src="assets\icons\twitter-logo.png" alt="Twitter">
-                    <a href="https://twitter.com/" target="_blank">Twitter</a>
-                <div>
-                    <img src="assets\icons\instagram-logo.png" alt="Instagram">
-                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-                </div>
-                <div>
-                    <img src="assets\icons\github-logo.png" alt="GitHub">
-                    <a href="https://github.com/" target="_blank">GitHub</a>
-                </div>
+                </a>
             </div>
-            <p>Rosario, Argentina</p>
-            <p>Copyright &copy; 2022 Radium Rocket. All right reserved</p>
+            <div class="footer-facebook">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="assets\icons\facebook-logo.png" alt="Facebook">
+                </a>
+            </div>
+            <div class="footer-twitter">
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="assets\icons\twitter-logo.png" alt="Twitter">
+                </a>
+            </div>
+            <div class="footer-instagram">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="assets\icons\instagram-logo.png" alt="Instagram">
+                </a>
+            </div>
+            <div class="footer-github">
+                <a href="https://github.com/" target="_blank">
+                    <img src="assets\icons\github-logo.png" alt="GitHub">
+                </a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>Rosario, Argentina</p>
+                <p>Copyright &copy; 2022 Radium Rocket. All right reserved</p>
+            </div>
         </footer>
     </body>
 

@@ -3,7 +3,7 @@
 
 }
 body, html{
-    font:normal 16px Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
 }
 header{
     background-image: url(../assets/Trackgenix.png);
@@ -209,14 +209,10 @@ header{
 .contact-area-name label{
     color: rgba(55, 56, 103, 1);
     margin-top: -10px;
-    margin-left: 100px;
-    margin-bottom: 20px;
 }
 .contact-area-name input{
     width: 450px;
     height: 37px;
-    margin-top: 100px;
-    margin-left: -30px;
 }
 .contact-area-ca{
     color: rgba(55, 56, 103, 1);
@@ -252,6 +248,7 @@ header{
     background-repeat: no-repeat;
     font:normal 20px Arial, Helvetica, sans-serif;
     color:rgba(55, 56, 103, 1);
+    width: 1440px;
     margin-top: 10px;
 
 }
@@ -289,10 +286,41 @@ footer{
     height: 176px;
 }
 
+.footer-linked {
+    margin-top: -82px;
+    margin-left: 480px;
+    padding-top: 40px;
+    
+}
+.footer-facebook {
+    padding-left: 600px;
+    margin-top: -40px;
+}
+.footer-twitter {
+    margin-left: 720px;
+    margin-top: -45px;
+}
+.footer-instagram {
+    margin-left: 840px;
+    margin-top: -40px;
+}
+.footer-github {
+    margin-left: 960px;
+    margin-top: -43px;
+    
+}
+.footer-copyright{
+    font:bold 12px Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
 #sidebar{
     width: 160px;
     height:1400px;
     float:right;
     position:fixed;
-    background-color: #FFFFFF;    
-}*/
+    background-color: #FFFFFF;
+}
