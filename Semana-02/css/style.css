@@ -12,6 +12,10 @@ header{
     width: 1440px;
     height:900px;
 }
+#main-container {
+    display: inline-block;
+    margin-left: 10%;
+}
 .header-body {
     color: rgb(255,255,255);
     margin-left:150px ;
@@ -344,10 +348,11 @@ footer{
 }
 
 #sidebar{
-    width: 160px;
-    height:1400px;
-    float:right;
+    display: inline-block;
+    width: 10%;
+    float:left;
     position:fixed;
     background-color: #FFFFFF;
+
 }
 
