@@ -2,6 +2,8 @@
     margin:0px;
 }
 body, html{
+    width:1440px;
+    height: 900px;
     font-family: 'Roboto';
 }
 #sidebar{
@@ -37,11 +39,12 @@ body, html{
 .login h4{
     margin-top: -55px;
     margin-left: 30px;
-    margin-bottom: 250px;
+    margin-bottom: 170px;
 }
 .contact-us-email h4{
     width: 80px;
     border-bottom:2px solid ;
+    font-size: 15px;
 }
 .contact-us-email img{
     margin-top: 10px;
@@ -49,22 +52,24 @@ body, html{
 .contact-us-email h5{
     margin-top: -55px;
     margin-left: 30px;
+    font-size: 10px;
 }
 .contact-us-phone img{
     margin-top: 30px;
 }
 .contact-us-phone h5{
-    margin-top: -55px;
-    margin-left:30px;
+    margin-top: -50px;
+    margin-left:20px;
+    font-size: 10px;
 }
 .contact-us-address img{
     margin-top: 30px;
 }
-  
 .contact-us-address h5{
-    width: 110px;
+    width: 100px;
     margin-top: -50px;
     margin-left:30px;
+    font-size: 10px;
 }
 #main-container {
     display: inline-block;
@@ -92,25 +97,28 @@ header{
 }
 
 #text-container h1{
-    width: 110%;
+    width: 400px;
     margin-right: 2px;
-    margin-left: 100px;
+    margin-left: 50px;
     padding-bottom: 10px;
-    border-bottom: 3px rgb(170,206,155) solid; 
+    border-bottom: 2px rgb(170,206,155) solid; 
     line-height: 30px;
     font:bold 40px Arial, Helvetica, sans-serif;
 }  
 #text-container h2{
+    width: 350px;
     margin-right: 2px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 20px;
     font:normal 20px Arial, Helvetica, sans-serif; 
     line-height: 30px;   
 }
 #text-container p{ 
+    width: 375px;
     margin-top: 100px;
+    margin-bottom: -50px;
     margin-right: 2px;
-    margin-left: 100px;
+    margin-left: 50px;
     color: rgba(255,255,255,0.75);
     font:normal 16px Arial, Helvetica, sans-serif;
     line-height: 30px;
@@ -133,7 +141,7 @@ header{
     text-align: center;
     font:normal 18px Arial, Helvetica, sans-serif;
 }
-.green-paragraph {
+.main-text-container p:last-child{
     margin-bottom: 100px;
     color: rgba(73, 163, 123, 1);
 }
@@ -189,7 +197,7 @@ header{
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     color:rgba(0, 0, 0, 1);
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-bottom: 20px;
     text-align: center;
     font:bold 40px Arial, Helvetica, sans-serif;
@@ -202,7 +210,7 @@ header{
 }
 .hourslog-text {
     width: 400px;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 100px;   
 }
 .hourslog-text p{
@@ -217,7 +225,7 @@ header{
 .resourcemanag-text{
     width: 400px;
     margin-top: -140px;
-    margin-left: 1000px;
+    margin-left: 900px;
 }
 .resourcemanag-text p{
     padding-top: 20px;
@@ -230,7 +238,7 @@ header{
 .reports-text{
     width: 400px;
     margin-top: 20px;
-    margin-left: 300px;
+    margin-left: 200px;
     padding-top: 100px;
 }
 .reports-text p{
@@ -244,7 +252,7 @@ header{
 .multiplerole-text{
     width: 400px;   
     margin-top: -150px; 
-    margin-left: 1000px;
+    margin-left: 900px;
 }
 .multiplerole-text p{
     padding-top: 20px;
@@ -320,12 +328,19 @@ header{
     margin-left: 100px;
     background-color: #AACE9B;
 }
+.button-submit:hover {
+    background-color:	rgb(0, 255, 0);
+
+}
 .button-reset {
     Width:117px;
     Height:48px;
     margin-left: 740px;
     background-color: rgba(241, 51, 18, 1);
 } 
+.button-reset:hover{
+    background-color: rgb(255, 112, 40);
+}
 #categories-area {
     width: 1440px;
     margin-top: 10px;
