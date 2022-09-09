@@ -1,0 +1,16 @@
+footer{
+    width: 1440px;
+    height: 176px;
+    background-color: rgba(170, 206, 155, 1);
+}
+#footer-socialm-incos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#footer-socialm-incos footer-copyright{
+    align-self: flex-end;
+    font:bold 12px;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+}

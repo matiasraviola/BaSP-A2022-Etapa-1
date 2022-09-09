@@ -1,0 +1,50 @@
+
+header{
+    width: 1440px;
+    height:900px;
+    background-image: url(../assets/Trackgenix.png);
+    background-position:center left;
+    background-repeat: no-repeat;
+}
+.header-body {
+    display: flex;
+    height: 900px;
+    width: 500px;
+    margin-left:150px ;
+    background-color: rgba(00, 00, 00, 0.5);
+    backdrop-filter: blur(2px);
+    color: rgb(255,255,255);
+}
+#text-container{
+    padding-top: 50px;
+    padding-right: 100px;
+}
+
+#text-container h1{
+    width: 400px;
+    margin-right: 2px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    border-bottom: 2px rgb(170,206,155) solid; 
+    line-height: 30px;
+    font-size: 40px;
+}  
+#text-container h2{
+    margin-right: 2px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size:20px;    
+}
+#text-container p{ 
+    width:350px;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    margin-left: 50px;
+    color: rgba(255,255,255,0.75);
+    font-size: 16px;
+    line-height: 40px;
+}
+/*Agrego este nth-of-type para que se muestre como si fuera un enter como en figma*/
+#text-container p:nth-of-type(2){
+    margin-top: 40px;
+}
