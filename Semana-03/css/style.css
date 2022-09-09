@@ -103,14 +103,14 @@ header{
     padding-bottom: 10px;
     border-bottom: 2px rgb(170,206,155) solid; 
     line-height: 30px;
-    font:bold 40px Arial, Helvetica, sans-serif;
+    font:bold 40px;
 }  
 #text-container h2{
     width: 350px;
     margin-right: 2px;
     margin-left: 50px;
     margin-top: 20px;
-    font:normal 20px Arial, Helvetica, sans-serif; 
+    font:normal 20px ; 
     line-height: 30px;   
 }
 #text-container p{ 
@@ -120,7 +120,7 @@ header{
     margin-right: 2px;
     margin-left: 50px;
     color: rgba(255,255,255,0.75);
-    font:normal 16px Arial, Helvetica, sans-serif;
+    font:normal 16px;
     line-height: 30px;
 }
 .main-text-container h2{
@@ -129,7 +129,7 @@ header{
     margin-bottom: 20px;
     border-bottom: 10px rgba(217, 217, 217, 1) solid; 
     text-align: center;
-    font:bold 40px Arial, Helvetica, sans-serif;
+    font:bold 40px;
     color:rgba(0, 0, 0, 1);
 }
 .main-text-container p{
@@ -139,7 +139,7 @@ header{
     padding-top: 35px;
     padding-bottom: 5px;
     text-align: center;
-    font:normal 18px Arial, Helvetica, sans-serif;
+    font:normal 18px;
 }
 .main-text-container p:last-child{
     margin-bottom: 100px;
@@ -154,13 +154,13 @@ header{
     margin-top: 200px ;
     margin-left: 100px;
     border-bottom: 4px rgba(40, 98, 118, 1) solid;
-    font:bold 40px Arial, Helvetica, sans-serif;
+    font:bold 40px;
     text-align: left;
 }
 .left-paragraph p{
     width: 550px;
     margin-left: 100px;
-    font:normal 30px Arial, Helvetica, sans-serif;
+    font:normal 30px;
     text-align: left;
 }
 .left-paragraph img{
@@ -179,13 +179,13 @@ header{
     margin-right: 600px;
     padding-top: 300px ;
     border-bottom: 4px rgba(255, 255, 255, 1) solid;
-    font:bold 40px Arial, Helvetica, sans-serif;
+    font:bold 40px ;
     text-align: center;
 }
 .right-paragraph p{
     width:550px;
     margin-left: 800px;
-    font:bold 30px Arial, Helvetica, sans-serif;
+    font:bold 30px ;
     text-align: left;
 }
 .right-paragraph img{
@@ -200,13 +200,13 @@ header{
     margin-left: 100px;
     margin-bottom: 20px;
     text-align: center;
-    font:bold 40px Arial, Helvetica, sans-serif;
+    font:bold 40px ;
 }
 #functionalities-area h3{
-    font:bold 30px Arial, Helvetica, sans-serif;
+    font:bold 30px ;
 }
 #functionalities-area p{
-    font:bold 20px Arial, Helvetica, sans-serif;
+    font:bold 20px ;
 }
 .hourslog-text {
     width: 400px;
@@ -263,7 +263,7 @@ header{
     padding-top: 50px;
 }
 #contact-area {
-    font:medium 14px Arial, Helvetica, sans-serif;
+    font:medium 14px 
 }
 #contact-area h2{
     width: 1176px;
@@ -273,7 +273,7 @@ header{
     margin-bottom: 20px;
     color:rgba(0, 0, 0, 1);
     text-align: center;
-    font:bold 40px Arial, Helvetica, sans-serif;
+    font:bold 40px 
 }
 .contact-area-name{
     width: 50px;
@@ -330,6 +330,7 @@ header{
 }
 .button-submit:hover {
     background-color:	rgb(0, 255, 0);
+
 }
 .button-reset {
     Width:117px;
@@ -346,14 +347,14 @@ header{
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center left;
     background-repeat: no-repeat;
-    font:normal 20px Arial, Helvetica, sans-serif;
+    font:normal 20px 
     color:rgba(55, 56, 103, 1);
 }
 #categories-area h4{
     margin-left: 25px;
 }
 #categories-area ol{
-    font:normal 10px Arial, Helvetica, sans-serif;
+    font:normal 10px
 }
 .categories-area-product {
     Width:180px;
@@ -381,32 +382,14 @@ footer{
     height: 176px;
     background-color: rgba(170, 206, 155, 1);
 }
-
-.footer-linked {
-    margin-top: -82px;
-    margin-left: 480px;
-    padding-top: 40px;  
+#footer-socialm-incos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.footer-facebook {
-    padding-left: 600px;
-    margin-top: -40px;
-}
-.footer-twitter {
-    margin-left: 720px;
-    margin-top: -45px;
-}
-.footer-instagram {
-    margin-left: 840px;
-    margin-top: -40px;
-}
-.footer-github {
-    margin-left: 960px;
-    margin-top: -43px; 
-}
-.footer-copyright{
-    margin-top: 50px;
-    margin-left: 60px;
-    font:bold 12px Arial, Helvetica, sans-serif;
+#footer-socialm-incos footer-copyright{
+    align-self: flex-end;
+    font:bold 12px 
     color: rgba(0, 0, 0, 1);
     text-align: center;
 }
