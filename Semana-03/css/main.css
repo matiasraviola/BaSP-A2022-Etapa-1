@@ -1,17 +1,16 @@
 
 main{
     flex-direction: column;
+    margin-left: 10%;
 }
 .main-text-container h2{
-    margin-left: 50px;
     margin-bottom: 20px;
-    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
+    border-bottom: 10px rgba(217, 217, 217, 1) solid;
     text-align: center;
     font-size:40px;
     color:rgba(0, 0, 0, 1);
 }
 .main-text-container p{
-    margin-left: 50px;
     line-height: 30px;
     text-align: center;
     font-size:18px;
@@ -22,12 +21,11 @@ main{
 }
 .left-paragraph {
     width: 500px;
-    color: rgba(0, 0, 0, 1); 
+    color: rgba(0, 0, 0, 1);
 }
 .left-paragraph h3{
     width: 1000px;
     margin-top: 200px ;
-    margin-left: 100px;
     border-bottom: 4px rgba(40, 98, 118, 1) solid;
     font-size:  40px;
     text-align: left;
@@ -43,7 +41,7 @@ main{
     margin-top: -400px ;
 }
 .right-paragraph {
-    width: 1440px;
+    width: 100%;
     height:900px;
     margin-top: 150px ;
     background-color: rgba(217, 217, 217, 1);
@@ -69,7 +67,7 @@ main{
 }
 #functionalities-area h2{
     width: 1176px;
-    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
+    border-bottom: 10px rgba(217, 217, 217, 1) solid;
     color:rgba(0, 0, 0, 1);
     margin-top: 50px;
     margin-left: 100px;
@@ -86,7 +84,7 @@ main{
 .hourslog-text {
     width: 400px;
     margin-left: 200px;
-    margin-top: 100px;   
+    margin-top: 100px;
 }
 .hourslog-text p{
     padding-top: 20px;
@@ -125,8 +123,8 @@ main{
     margin-left: -170px;
 }
 .multiplerole-text{
-    width: 400px;   
-    margin-top: -150px; 
+    width: 400px;
+    margin-top: -150px;
     margin-left: 900px;
 }
 .multiplerole-text p{
@@ -142,13 +140,13 @@ main{
 }
 #contact-area h2{
     width: 1176px;
-    border-bottom: 10px rgba(217, 217, 217, 1) solid; 
+    border-bottom: 10px rgba(217, 217, 217, 1) solid;
     margin-top: 50px;
     margin-left: 100px;
     margin-bottom: 20px;
     color:rgba(0, 0, 0, 1);
     text-align: center;
-    font:bold 40px 
+    font:bold 40px
 }
 .contact-area-name{
     width: 50px;
@@ -159,8 +157,8 @@ main{
     color: rgba(55, 56, 103, 1);
 }
 .contact-area-name input{
-    Width:446px;
-    Height:37px;
+    width:446px;
+    height:37px;
     margin-left: 100px;
     margin-top: 10px;
 }
@@ -171,8 +169,8 @@ main{
     color: rgba(55, 56, 103, 1);
 }
 .contact-area-ca select{
-    Width:446px;
-    Height:37px;
+    width:446px;
+    height:37px;
     margin-left: 800px;
     color: rgba(55, 56, 103, 1);
 }
@@ -183,8 +181,8 @@ main{
     color: rgba(55, 56, 103, 1);
 }
 .contact-area-email input{
-    Width:446px;
-    Height:37px;
+    width:446px;
+    height:37px;
     margin-top: 10px;
 }
 .contact-area-message{
@@ -194,12 +192,12 @@ main{
     color: rgba(55, 56, 103, 1);
 }
 .contact-area-message textarea {
-    Width:1029px;
-    Height:179.57px;
+    width:1029px;
+    height:179.57px;
 }
 .button-submit {
-    Width:177px;
-    Height:48px;
+    width:177px;
+    height:48px;
     margin-left: 100px;
     background-color: #AACE9B;
 }
@@ -208,16 +206,17 @@ main{
 
 }
 .button-reset {
-    Width:117px;
-    Height:48px;
+    width:117px;
+    height:48px;
     margin-left: 740px;
     background-color: rgba(241, 51, 18, 1);
-} 
+}
 .button-reset:hover{
     background-color: rgb(255, 112, 40);
 }
 #categories-area {
-    width: 1440px;
+    width: 100%;
+    
     margin-top: 10px;
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center left;
@@ -232,21 +231,21 @@ main{
     font:normal 10px
 }
 .categories-area-product {
-    Width:180px;
-    Height:110px;
+    width:180px;
+    height:110px;
     padding-top: 200px;
     margin-left: 474px;
 }
 .categories-area-enterprise {
-    Width:180px;
-    Height:110px;
+    width:180px;
+    height:110px;
     margin-top: -110px;
     margin-left: 650px;
     padding-top: -20px;
 }
 .categories-area-support{
-    Width:180px;
-    Height:110px;
+    width:180px;
+    height:110px;
     margin-left: 850px;
     margin-top: -110px;
     padding-top: -20px;

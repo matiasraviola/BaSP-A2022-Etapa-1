@@ -2,10 +2,5 @@
     margin:0px;
 }
 body, html{
-    width:1440px;
-    height: 900px;
     font-family: 'Roboto';
-}
-#main-container {
-    margin-left: 10%;
 }

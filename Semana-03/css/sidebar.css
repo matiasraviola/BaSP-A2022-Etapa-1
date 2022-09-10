@@ -1,19 +1,18 @@
 
-#sidebar{
-    display: inline-block;
+aside{
     position:fixed;
     width: 10%;
-    height: 982px;
-    margin-left: 10px;
+    height: 900px;
     background-color: #FFFFFF;
     color: rgba(241, 51, 18, 1);
     float:left;
 }
-#sidebar img{
+aside img{
+    width: 100%;
     margin-bottom: 30px;
 }
 .home img{
-    margin: 0 0 0 0
+    margin: 0 0 0 0;
 }
 .home h4{
     margin-top: -55px;

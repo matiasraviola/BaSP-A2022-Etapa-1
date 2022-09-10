@@ -5,25 +5,27 @@ hours they are working, on the different projects in an easy and simple way and 
 To create Trackgenix as it will look like, we use Figma to create the layout and screenflow we want, Git and Github to create all the repositorie and all the page code are write with HTML5.
 
 
-- How to open
-    - access to the folder "Semana-01" inside the "BaSP-A2022-Etapa-1" 
-    - open the file "index.html" on your browser
+-  How to open
+    1- access to the folder "Semana-xx"(use allways the most older "Semana-xx" exist) inside the "BaSP-A2022-Etapa-1"
+    2- open the file "index.html" on your browser
 
-- How tu use
-    - sing up/login with your account
-    - you will be see all the projects you have if you click one you can charge all the hours you worked in that | project.
+-  How tu use
+    1- sing up/login with your account
+    2- you will be see all the projects you have if you click one you can charge all the hours you worked in that project.
 
 
 
 - About GigaTech Software Solutions SA
     Provides software development services to other companies, which have too many employees. Because of this "Trackgenix" was created.
 
+### Week 00
+We start creating the landing page design and the rest of the layout with Figma.
 
 ### Week 01
 We write the html code for the web page, we also create a repository to keep safe all the versions we made about this web page and config everything to have a remote repository with github and started to create this file too.
 
 ### Week 02
-We need to change the html to write the CSS code. In this part of the problem We recreate the aesthetics of the page that we designed in week #00 with Figma, only the landdind page for a desktop.
+We need to change the html to write the CSS code. In this part of the problem we recreate the aesthetics of the page that we designed in week #00 with Figma, only the landding page for a desktop.
 
 ### Week 03
 
