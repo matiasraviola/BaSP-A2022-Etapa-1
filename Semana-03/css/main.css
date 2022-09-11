@@ -1,7 +1,10 @@
 
 main{
-    flex-direction: column;
     margin-left: 10%;
+}
+.main-text-container{
+    display: flex;
+    flex-wrap: wrap;
 }
 .main-text-container h2{
     margin-bottom: 20px;
@@ -65,78 +68,100 @@ main{
     margin-top: -350px;
     margin-left: 100px;
 }
+#functionalities-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:flex-start ;
+
+}
 #functionalities-area h2{
-    width: 1176px;
+    width: 80%;
     border-bottom: 10px rgba(217, 217, 217, 1) solid;
     color:rgba(0, 0, 0, 1);
     margin-top: 50px;
     margin-left: 100px;
     margin-bottom: 20px;
+    justify-content: center;
     text-align: center;
-    font:bold 40px ;
+    font-size: 40px ;
 }
 #functionalities-area h3{
-    font:bold 30px ;
+    font-size: 30px ;
 }
 #functionalities-area p{
-    font:bold 20px ;
+    font-size: 20px ;
 }
 .hourslog-text {
-    width: 400px;
-    margin-left: 200px;
-    margin-top: 100px;
+    flex-basis: 40%;
+    display: flex;
+    margin-bottom:30px ;
+}
+.hourslog-text h3{
+    align-items:flex-start;
+    order: 2;
+    text-align: center;
 }
 .hourslog-text p{
-    padding-top: 20px;
+    order:3;
+    text-align: left;
+    align-items:flex-end;
 }
 .hourslog-text img {
-    width: 150px;
-    margin-left: -170px;
-    margin-top: -200px ;
-    padding-top: 50px;
+    order: 1;
+    justify-content: flex-start;
 }
+
 .resourcemanag-text{
-    width: 400px;
-    margin-top: -140px;
-    margin-left: 900px;
+    flex-basis: 40%;
+    margin-bottom:30px ;
+    display: flex;
+}
+.resourcemanag-text h3{
+    order: 2;
 }
 .resourcemanag-text p{
-    padding-top: 20px;
+    text-align: left;
+    align-items:flex-end;
+    order:3;
 }
 .resourcemanag-text img{
-    margin-top: -200px;
-    margin-left: -170px ;
-    padding-top: 50px;
+    order: 1;
 }
 .reports-text{
-    width: 400px;
-    margin-top: 20px;
-    margin-left: 200px;
-    padding-top: 100px;
+    flex-basis: 40%;
+    margin-bottom:30px ;
+    display: flex;
+}
+.reports-text h3{
+    order:2;
 }
 .reports-text p{
-    padding-top: 20px;
+    align-items:flex-end;
+    text-align: left;
+    order:3;
 }
 .reports-text img{
-    width: 150px;
-    margin-top: -150px;
-    margin-left: -170px;
+    order: 1;
 }
 .multiplerole-text{
-    width: 400px;
-    margin-top: -150px;
-    margin-left: 900px;
+    flex-basis: 40%;
+    margin-bottom:30px ;
+    display: flex;
+}
+.multiplerole-text h3{
+    order:2;
 }
 .multiplerole-text p{
-    padding-top: 20px;
+    align-items:flex-end;
+    text-align: left;
+    order:3;
 }
 .multiplerole-text img{
-    margin-top: -200px;
-    margin-left: -170px ;
-    padding-top: 50px;
+    order: 1;
 }
 #contact-area {
-    font:medium 14px;
+    font-size: 14px;
 }
 #contact-area h2{
     width: 1176px;
@@ -146,7 +171,7 @@ main{
     margin-bottom: 20px;
     color:rgba(0, 0, 0, 1);
     text-align: center;
-    font:bold 40px
+    font-size: 40px;
 }
 .contact-area-name{
     width: 50px;
@@ -216,7 +241,6 @@ main{
 }
 #categories-area {
     width: 100%;
-    
     margin-top: 10px;
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center left;
