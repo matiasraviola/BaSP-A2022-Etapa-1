@@ -91,7 +91,15 @@ main{
 }
 #functionalities-area p{
     font-size: 20px ;
+    order:3;
+    text-align: left;
+    align-items:flex-end;
 }
+#functionalities-area svg{
+    order: 1;
+    justify-content: flex-start;
+    transform: scale(2);
+ }
 .hourslog-text {
     flex-basis: 40%;
     display: flex;
@@ -102,16 +110,6 @@ main{
     order: 2;
     text-align: center;
 }
-.hourslog-text p{
-    order:3;
-    text-align: left;
-    align-items:flex-end;
-}
-.hourslog-text img {
-    order: 1;
-    justify-content: flex-start;
-}
-
 .resourcemanag-text{
     flex-basis: 40%;
     margin-bottom:30px ;
@@ -119,14 +117,6 @@ main{
 }
 .resourcemanag-text h3{
     order: 2;
-}
-.resourcemanag-text p{
-    text-align: left;
-    align-items:flex-end;
-    order:3;
-}
-.resourcemanag-text img{
-    order: 1;
 }
 .reports-text{
     flex-basis: 40%;
@@ -136,14 +126,6 @@ main{
 .reports-text h3{
     order:2;
 }
-.reports-text p{
-    align-items:flex-end;
-    text-align: left;
-    order:3;
-}
-.reports-text img{
-    order: 1;
-}
 .multiplerole-text{
     flex-basis: 40%;
     margin-bottom:30px ;
@@ -151,14 +133,6 @@ main{
 }
 .multiplerole-text h3{
     order:2;
-}
-.multiplerole-text p{
-    align-items:flex-end;
-    text-align: left;
-    order:3;
-}
-.multiplerole-text img{
-    order: 1;
 }
 #contact-area {
     font-size: 14px;

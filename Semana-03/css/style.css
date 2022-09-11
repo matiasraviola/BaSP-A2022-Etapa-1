@@ -13,8 +13,8 @@ body, html{
         flex-basis: 100%;
         margin: 0%;
         padding:0%;
-        justify-content: center;
         align-items:start;
+        flex-wrap: wrap;
     }
     header #text-container{
        margin-left:0%
@@ -29,8 +29,7 @@ body, html{
     main #functionalities-area{
         flex-direction: column;
     }
-    main #functionalities-area img{
-        width: 50%;
-        height: 50%;
+    main #functionalities-area svg{
+        transform: scale(1.5);
     }
     }
