@@ -7,12 +7,12 @@ body, html{
 @media (max-width:768px){
     aside{
         display: none;
-        flex-direction: row;
     }
     main, footer, header,{
+        min-height: 100vh;
         flex-basis: 100%;
-        margin: 0%;
-        padding:0%;
+        margin:auto;
+        padding:auto;
         align-items:start;
         flex-wrap: wrap;
     }
@@ -32,4 +32,8 @@ body, html{
     main #functionalities-area svg{
         transform: scale(1.5);
     }
+    main #contact-area {
+        flex-direction: column;
+    }
+
     }

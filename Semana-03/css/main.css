@@ -69,10 +69,10 @@ main{
     margin-left: 100px;
 }
 #functionalities-area{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items:flex-start ;
+    align-items:flex-start ; */
 
 }
 #functionalities-area h2{
@@ -135,49 +135,43 @@ main{
     order:2;
 }
 #contact-area {
+    flex-basis: 100%;
+    display: flex;
+justify-content: flex;
     font-size: 14px;
 }
 #contact-area h2{
-    width: 1176px;
     border-bottom: 10px rgba(217, 217, 217, 1) solid;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-bottom: 20px;
     color:rgba(0, 0, 0, 1);
     text-align: center;
     font-size: 40px;
 }
 .contact-area-name{
     width: 50px;
+    margin-bottom: 25px;
 }
 .contact-area-name label{
-    margin-top: -10px;
-    margin-left: 100px;
     color: rgba(55, 56, 103, 1);
 }
 .contact-area-name input{
     width:446px;
     height:37px;
-    margin-left: 100px;
-    margin-top: 10px;
 }
 .contact-area-ca{
     width: 150px;
     height: 16px;
-    margin-top: -40px;
     color: rgba(55, 56, 103, 1);
+    margin-bottom: 25px;
 }
 .contact-area-ca select{
     width:446px;
     height:37px;
-    margin-left: 800px;
     color: rgba(55, 56, 103, 1);
 }
 .contact-area-email{
-    margin-top: 50px;
-    margin-left: 100px;
     width:50px;
     color: rgba(55, 56, 103, 1);
+    margin-bottom: 25px;
 }
 .contact-area-email input{
     width:446px;
@@ -185,7 +179,6 @@ main{
     margin-top: 10px;
 }
 .contact-area-message{
-    margin-left: 100px;
     width:50px;
     margin-top: 44px;
     color: rgba(55, 56, 103, 1);
@@ -197,7 +190,6 @@ main{
 .button-submit {
     width:177px;
     height:48px;
-    margin-left: 100px;
     background-color: #AACE9B;
 }
 .button-submit:hover {
@@ -207,7 +199,6 @@ main{
 .button-reset {
     width:117px;
     height:48px;
-    margin-left: 740px;
     background-color: rgba(241, 51, 18, 1);
 }
 .button-reset:hover{
@@ -219,14 +210,13 @@ main{
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center left;
     background-repeat: no-repeat;
-    font:normal 20px ;
     color:rgba(55, 56, 103, 1);
 }
 #categories-area h4{
     margin-left: 25px;
 }
 #categories-area ol{
-    font:normal 10px
+    font-size: 10px;
 }
 .categories-area-product {
     width:180px;
