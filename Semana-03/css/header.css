@@ -5,19 +5,13 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
-#text-container{
-    display: flex;
-    flex-direction: column;
-    height:100vh;
-    width: 470px;
-    margin-left:150px ;
-    padding-left: 30px;
+#blur-box{
+    padding: 30px 20px;
     background-color: rgba(00, 00, 00, 0.5);
     backdrop-filter: blur(2px);
     color: rgb(255,255,255);
-    padding-top: 50px;
 }
-#text-container h1{
+#blur-box h1{
     justify-content: start;
     width: 400px;
     padding-bottom: 10px;
@@ -25,19 +19,19 @@ header{
     line-height: 30px;
     font-size: 40px bold;
 }
-#text-container h2{
+#blur-box h2{
     margin-top: 20px;
     font-size:20px bold ;
 }
-#text-container p{
+#blur-box p{
     width:350px;
     margin-top: 100px;
-    margin-bottom: -50px;
+    margin-bottom: 20px;
     color: rgba(255,255,255,0.75);
     font-size: 16px;
     line-height: 40px;
 }
 /*Agrego este nth-of-type para que se muestre como si fuera un enter como en figma*/
-#text-container p:nth-of-type(2){
+#blur-box p:nth-of-type(2){
     margin-top: 40px;
 }

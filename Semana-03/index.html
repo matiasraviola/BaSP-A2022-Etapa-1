@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
-        <link rel="style-reset" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/header.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -45,10 +45,9 @@
                 </div>
         </aside>
         <header>
-            <div id="text-container">
+            <div id="blur-box">
                 <h1>Trackgenix</h1>
                 <h2>By GigaTech Software Solutions SA</h2>
-                    <div>
                         <p>
                             The company GigaTech Software Solutions SA provides software development servicesto other
                             companies, which too many employees.
@@ -61,7 +60,6 @@
                             employee in each project and provides information to the companies so they can make better
                             decisions
                         </p>
-                    </div>
             </div>
         </header>
         <main>
@@ -93,7 +91,7 @@
             </section>
             <section class="main-text-container">
                 <h2>Why choose us?</h2>
-                <div class="left-paragraph">
+                <div class="paragraph">
                     <h3>Productivity Booster</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -102,7 +100,7 @@
                     </p>
                     <img src="assets\productivitybooster.png" alt="prodcutivity booster">
                 </div>
-                <div class="right-paragraph">
+                <div class="paragraph">
                     <h3>Work Traceability</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -111,7 +109,7 @@
                     </p>
                     <img src="assets\worktraceability.png" alt="work traceability">
                 </div>
-                <div class="left-paragraph">
+                <div class="paragraph">
                     <h3>Leadership and team management</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -120,7 +118,7 @@
                     </p>
                     <img src="assets\leadership.png" alt="leadership">
                 </div>
-                <div class="right-paragraph">
+                <div class="paragraph">
                     <h3>Decision making</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -133,11 +131,6 @@
             <section id="functionalities-area">
                 <h2>Functionalities</h2>
                 <div class="hourslog-text">
-                    <h3>Hours log</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard.
-                    </p>
                     <svg width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="142" height="142" fill="#E5E5E5"/><rect width="1440" height="6864"
                         transform="translate(-150 -5323)" fill="black"/><g clip-path="url(#clip0_41_5)">
@@ -149,12 +142,15 @@
                         x2="70.7321" y2="70.7319" stroke="black" stroke-width="4" stroke-linecap="round"/>
                         </g><defs><clipPath id="clip0_41_5"><rect width="1440" height="635" fill="white"
                         transform="translate(-150 -182)"/></clipPath></defs></svg>
+                        <div class="flex-container">
+                            <h3>Hours log</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard.
+                            </p>
+                        </div>
                 </div>
                 <div class="resourcemanag-text">
-                    <h3>Resource management</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard.
-                    </p>
                     <svg width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.82843" y="70.769" width="96" height="96" transform="rotate(-45.0493 2.82843 70.769)"
                         fill="#D2D2D2" fill-opacity="0.01" stroke="black" stroke-width="4"/><circle cx="61.2472"
@@ -188,13 +184,15 @@
                         84.4 61.6434 84.4Z" fill="black"/><rect x="60.3174" y="60.0183" width="2.32472"
                         height="3.71956" fill="black"/><rect x="60.3174" y="82.8008" width="2.32472"
                         height="3.71956" fill="black"/></svg>
-                </div>
-                <div class="reports-text">
-                    <h3>Reports</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard.
-                    </p>
-                    <svg width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="flex-container">
+                            <h3>Resource management</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reports-text">
+                        <svg width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.82843" y="70.769" width="96" height="96" transform="rotate(-45.0493 2.82843 70.769)"
                         stroke="black" stroke-width="4"/><rect x="50" y="42.7209" width="41" height="56" stroke="black"
                          stroke-width="4"/><rect x="55.5" y="54.9709" width="30" height="2" fill="black"/>
@@ -202,13 +200,14 @@
                         <rect x="55.5" y="72.9709" width="30" height="2" fill="black"/>
                         <rect x="55.5" y="81.9709" width="30" height="2" fill="black"/>
                         </svg>
+                        <div class="flex-container">
+                            <h3>Reports</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard.
+                        </p>
+                        </div>
                 </div>
                 <div class="multiplerole-text">
-                    <h3>Multiple roles</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard.
-                    </p>
                     <svg width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.82843" y="70.769" width="96" height="96" transform="rotate(-45.0493 2.82843 70.769)"
                         stroke="black" stroke-width="4"/><circle cx="57.4172" cy="55.4447" r="6.72379" stroke="black"
@@ -218,6 +217,13 @@
                         stroke="black" stroke-width="4"/><path d="M75.1885 78.1871V84.2008H103.622V78.1871C100.085
                         73.8283 96.8517 72.508 89.1512 71.9229C81.2809 72.4993 78.3983 74.1564 75.1885 78.1871Z"
                         stroke="black" stroke-width="4"/></svg>
+                        <div class="flex-container">
+                            <h3>Multiple roles</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard.
+                            </p>
+                        </div>
                 </div>
             </section>
             <section id="contact-area">
@@ -242,8 +248,10 @@
                         <label>Message</label>
                         <textarea name="message" placeholder="Your Message Here"></textarea>
                     </div>
-                    <input class="button-submit" type="submit" name="Submit" value="Send Message">
-                    <input class="button-reset" type="reset" name="Reset" value="Reset">
+                    <div id="buttons">
+                        <input class="button-submit" type="submit" name="Submit" value="Send Message">
+                        <input class="button-reset" type="reset" name="Reset" value="Reset">
+                    </div>
                 </form>
             </section>
             <section id="categories-area">
@@ -280,27 +288,138 @@
                 <div id="footer-socialm-incos" >
                     <div class="footer-linked">
                         <a href="https://ar.linkedin.com/" target="_blank">
-                            <img src="assets\icons\linkedin-negative.svg" alt="linked in">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_884_4254)"><path d="M35.1871 0H2.80547C1.2543 0 0 1.22461 0
+                                    2.73867V35.2539C0 36.768 1.2543 38 2.80547 38H35.1871C36.7383 38 38 36.768 38
+                                    35.2613V2.73867C38 1.22461 36.7383 0 35.1871
+                                    0ZM11.2738 32.3816H5.6332V14.2426H11.2738V32.3816ZM8.45352 11.7711C6.64258 11.7711
+                                    5.18047 10.309 5.18047 8.50547C5.18047 6.70195 6.64258 5.23984 8.45352 5.23984C10.257
+                                    5.23984 11.7191 6.70195 11.7191 8.50547C11.7191 10.3016 10.257 11.7711 8.45352
+                                    11.7711ZM32.3816 32.3816H26.7484V23.5645C26.7484 21.4641 26.7113 18.7551 23.8168
+                                    18.7551C20.8852 18.7551 20.4398 21.0484 20.4398
+                                    23.416V32.3816H14.8141V14.2426H20.2172V16.7215H20.2914C21.041 15.2965 22.8816
+                                    13.7898 25.6203 13.7898C31.3277 13.7898 32.3816 17.5453 32.3816 22.4289V32.3816Z"
+                                    fill="white"/></g><defs><clipPath id="clip0_884_4254"><rect width="38" height="38"
+                                    fill="white"/></clipPath></defs></svg>
                         </a>
                     </div>
                     <div class="footer-facebook">
                         <a href="https://www.facebook.com" target="_blank">
-                            <img src="assets\icons\facebook-negative.svg" alt="facebook">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_884_4255)">
+                                <path d="M38 19C38 8.50658 29.4934 0 19 0C8.50658 0 0 8.50658 0 19C0 28.4833 6.94799
+                                36.3438 16.0312 37.7692V24.4922H11.207V19H16.0312V14.8141C16.0312 10.0522 18.8679 7.42187
+                                23.2078 7.42187C25.286 7.42187 27.4609 7.79297 27.4609 7.79297V12.4687H25.0652C22.705
+                                12.4687 21.9688 13.9335 21.9688 15.4375V19H27.2383L26.3959 24.4922H21.9688V37.7692C31.052
+                                36.3438 38 28.4833 38 19Z" fill="white"/></g><defs><clipPath id="clip0_884_4255"><rect
+                                width="38" height="38" fill="white"/></clipPath></defs></svg>
                         </a>
                     </div>
                     <div class="footer-twitter">
                         <a href="https://twitter.com/" target="_blank">
-                            <img src="assets\icons\twitter-negative.svg" alt="twitter">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_884_4256)"><path d="M11.9544 34.4377C26.2905 34.4377 34.1339
+                                    22.5575 34.1339 12.2581C34.1339 11.9241 34.1265 11.5827 34.1117 11.2488C35.6375
+                                    10.1453 36.9542 8.77859 38 7.21274C36.579 7.84497 35.0703 8.25787 33.5254 8.43735C35.152
+                                    7.46229 36.37 5.93051 36.9535 4.12598C35.4232 5.0329 33.7497 5.67265 32.0046
+                                    6.01782C30.8288 4.76849 29.2742 3.94128 27.5812 3.6641C25.8881 3.38691 24.1509
+                                    3.67518 22.6381 4.48434C21.1253 5.29349 19.9212 6.57847 19.2119 8.14059C18.5027
+                                    9.70272 18.3278 11.455 18.7143 13.1265C15.6156 12.971 12.5842 12.166 9.81664
+                                    10.7638C7.04904 9.36163 4.60701 7.39346 2.64887 4.98692C1.65363 6.70282 1.34909 8.73329
+                                    1.79713 10.6657C2.24517 12.598 3.41218 14.2873 5.06098 15.3902C3.82316 15.3509 2.61246
+                                    15.0176 1.52891 14.4179V14.5144C1.5278 16.3151 2.15032 18.0606 3.29066 19.4542C4.43099
+                                    20.8479 6.01876 21.8036 7.78406 22.1589C6.63742 22.4726 5.43397 22.5183 4.26684
+                                    22.2925C4.76497 23.8411 5.73416 25.1956 7.03914 26.1669C8.34412 27.1382 9.91978
+                                    27.6778 11.5462 27.7105C8.78501 29.8794 5.37411 31.0559 1.86289 31.0503C1.2402 31.0494
+                                    0.618132 31.0112 0 30.936C3.56702 33.2245 7.71642 34.4399 11.9544 34.4377Z"
+                                    fill="white"/></g><defs><clipPath id="clip0_884_4256"><rect width="38" height="38"
+                                    fill="white"/></clipPath></defs></svg>
                         </a>
                     </div>
                     <div class="footer-instagram">
                         <a href="https://www.instagram.com/" target="_blank">
-                            <img src="assets\icons\instagram-negative.svg" alt="instagram">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_884_4257)"><path d="M19 3.42148C24.0766 3.42148 24.6777 3.44375
+                                26.6742 3.53281C28.5297 3.61445 29.5316 3.92617 30.1996 4.18594C31.0828 4.52734 31.7211
+                                4.94297 32.3816 5.60352C33.0496 6.27148 33.4578 6.90234 33.7992 7.78555C34.059 8.45352
+                                34.3707 9.46289 34.4523 11.3109C34.5414 13.3148 34.5637 13.916 34.5637 18.9852C34.5637
+                                24.0617 34.5414 24.6629 34.4523 26.6594C34.3707 28.5148 34.059 29.5168 33.7992
+                                30.1848C33.4578 31.068 33.0422 31.7063 32.3816 32.3668C31.7137 33.0348 31.0828 33.443
+                                30.1996 33.7844C29.5316 34.0441 28.5223 34.3559 26.6742 34.4375C24.6703 34.5266 24.0691
+                                34.5488 19 34.5488C13.9234 34.5488 13.3223 34.5266 11.3258 34.4375C9.47031 34.3559
+                                8.46836 34.0441 7.80039 33.7844C6.91719 33.443 6.27891 33.0273 5.61836 32.3668C4.95039
+                                31.6988 4.54219 31.068 4.20078 30.1848C3.94102 29.5168 3.6293 28.5074 3.54766
+                                26.6594C3.45859 24.6555 3.43633 24.0543 3.43633 18.9852C3.43633 13.9086 3.45859 13.3074
+                                3.54766 11.3109C3.6293 9.45547 3.94102 8.45352 4.20078 7.78555C4.54219 6.90234 4.95781
+                                6.26406 5.61836 5.60352C6.28633 4.93555 6.91719 4.52734 7.80039 4.18594C8.46836 3.92617
+                                9.47774 3.61445 11.3258 3.53281C13.3223 3.44375 13.9234 3.42148 19 3.42148ZM19 0C13.8418
+                                0 13.1961 0.0222656 11.1699 0.111328C9.15117 0.200391 7.76328 0.526953 6.56094
+                                0.994531C5.30664 1.48438 4.24531 2.13008 3.19141 3.19141C2.13008 4.24531 1.48438 5.30664
+                                0.994531 6.55352C0.526953 7.76328 0.200391 9.14375 0.111328 11.1625C0.0222656 13.1961 0
+                                13.8418 0 19C0 24.1582 0.0222656 24.8039 0.111328 26.8301C0.200391 28.8488 0.526953
+                                30.2367 0.994531 31.4391C1.48438 32.6934 2.13008 33.7547 3.19141 34.8086C4.24531 35.8625
+                                5.30664 36.5156 6.55352 36.998C7.76328 37.4656 9.14375 37.7922 11.1625 37.8812C13.1887
+                                37.9703 13.8344 37.9926 18.9926 37.9926C24.1508 37.9926 24.7965 37.9703 26.8227
+                                37.8812C28.8414 37.7922 30.2293 37.4656 31.4316 36.998C32.6785 36.5156 33.7398
+                                35.8625 34.7938 34.8086C35.8477 33.7547 36.5008 32.6934 36.9832 31.4465C37.450830.2367
+                                37.7773 28.8563 37.8664 26.8375C37.9555 24.8113 37.9777 24.1656 37.9777 19.0074C37.9777
+                                13.8492 37.9555 13.2035 37.8664 11.1773C37.7773 9.15859 37.4508 7.7707 36.9832
+                                6.56836C36.5156 5.30664 35.8699 4.24531 34.8086 3.19141C33.7547 2.1375 32.6934
+                                1.48438 31.4465 1.00195C30.2367 0.534375 28.8563 0.207813 26.8375 0.11875C24.8039
+                                0.0222656 24.1582 0 19 0Z" fill="white"/><path d="M19 9.24023C13.6117 9.24023 9.24023
+                                13.6117 9.24023 19C9.24023 24.3883 13.6117 28.7598 19 28.7598C24.3883 28.7598 28.7598
+                                24.3883 28.7598 19C28.7598 13.6117 24.3883 9.24023 19 9.24023ZM19 25.3309C15.5043
+                                25.3309 12.6691 22.4957 12.6691 19C12.6691 15.5043 15.5043 12.6691 19 12.6691C22.4957
+                                12.6691 25.3309 15.5043 25.3309 19C25.3309 22.4957 22.4957 25.3309 19 25.3309Z"
+                                fill="white"/><path d="M31.4242 8.8542C31.4242 10.1159 30.4 11.1327 29.1457
+                                11.1327C27.884 11.1327 26.8672 10.1085 26.8672 8.8542C26.8672 7.59248 27.8914
+                                6.57568 29.1457 6.57568C30.4 6.57568 31.4242 7.5999 31.4242 8.8542Z" fill="white"/></g>
+                                <defs><clipPath id="clip0_884_4257"><rect width="38" height="38" fill="white"/></clipPath>
+                                </defs></svg>
                         </a>
                     </div>
                     <div class="footer-github">
                         <a href="https://github.com/" target="_blank">
-                            <img src="assets\icons\github-negative.svg" alt="github">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_884_4258)"><path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.0001 0.791504C14.4895 0.793844 10.1269 2.3914 6.69223 5.2985C3.25756 8.2056
+                                0.974865 12.2327 0.252297 16.6597C-0.470271 21.0866 0.414402 25.6248 2.74815
+                                29.4628C5.08189 33.3007 8.71251 36.1881 12.9908 37.6087C13.9347 37.7839 14.2902 37.1989
+                                14.2902 36.7015C14.2902 36.2041 14.2713 34.7619 14.265 33.1853C8.97939 34.3271 7.86249
+                                30.9548 7.86249 30.9548C7.00043 28.7649 5.75453 28.1893 5.75453 28.1893C4.0304 27.0193
+                                5.88353 27.0412 5.88353 27.0412C7.79328 27.1758 8.79693 28.9902 8.79693 28.9902C10.4896
+                                31.8776 13.2425 31.0424 14.3248 30.5543C14.4947 29.3312 14.9887 28.499 15.533
+                                28.0267C11.3107 27.5512 6.87458 25.9307 6.87458 18.6918C6.84841 16.8144 7.54905 14.9988
+                                8.83153 13.6207C8.63647 13.1452 7.98519 11.2245 9.01715 8.61544C9.01715 8.61544 10.6123
+                                8.10865 14.243 10.5519C17.3572 9.70508 20.643 9.70508 23.7572 10.5519C27.3848 8.10865
+                                28.9767 8.61544 28.9767 8.61544C30.0118 11.2182 29.3606 13.139 29.1655 13.6207C30.4521
+                                14.9991 31.1542 16.8178 31.1256 18.698C31.1256 25.9526 26.68 27.5512 22.4515 28.0173C23.1311
+                                28.6054 23.7383 29.7535 23.7383 31.5179C23.7383 34.0456 23.7163 36.079 23.7163
+                                36.7015C23.7163 37.2052 24.0592 37.7933 25.0219 37.6087C29.3008 36.188 32.9317 33.3 35.2654
+                                29.4614C37.5992 25.6229 38.4834 21.084 37.76 16.6566C37.0366 12.2292 34.7528 8.20207 31.3169
+                                5.29546C27.8812 2.38886 23.5175 0.792361 19.0064 0.791504H19.0001Z" fill="white"/><path
+                                d="M7.19498 27.9175C7.15408 28.0113 7.00306 28.0395 6.88036 27.9738C6.75766 27.9081 6.66642
+                                27.7861 6.71047 27.6891C6.75452 27.5921 6.90239 27.5671 7.02509 27.6328C7.14779 27.6985
+                                7.24217 27.8236 7.19498 27.9175Z" fill="white"/><path d="M7.96579 28.7711C7.90063 28.8038
+                                7.82609 28.8129 7.75492 28.7969C7.68375 28.7809 7.62039 28.7409 7.57566 28.6835C7.45296
+                                28.5522 7.42777 28.3707 7.52216 28.2894C7.61655 28.208 7.78645 28.2456 7.90916 28.377C8.03186
+                                28.5084 8.06017 28.6898 7.96579 28.7711Z" fill="white"/><path d="M8.71537 29.8567C8.59896
+                                29.938 8.40074 29.8567 8.29062 29.694C8.26017 29.6648 8.23596 29.6298 8.21942
+                                29.5911C8.20287 29.5524 8.19434 29.5108 8.19434 29.4688C8.19434 29.4267 8.20287 29.3851
+                                8.21942 29.3464C8.23596 29.3077 8.26017 29.2727 8.29062 29.2435C8.40703 29.1653 8.60525
+                                29.2435 8.71537 29.4031C8.82549 29.5626 8.82863 29.7753 8.71537 29.8567Z" fill="white"/>
+                                <path d="M9.73139 30.9078C9.62757 31.0236 9.41677 30.9923 9.24373 30.8359C9.07069 30.6794
+                                9.02978 30.4667 9.1336 30.3541C9.23743 30.2415 9.44823 30.2728 9.62756 30.4261C9.80689
+                                30.5793 9.84151 30.7952 9.73139 30.9078Z" fill="white"/><path d="M11.1561 31.5211C11.1089
+                                31.6682 10.895 31.7338 10.681 31.6713C10.4671 31.6087 10.3255 31.4335 10.3664
+                                31.2834C10.4073 31.1332 10.6244 31.0644 10.8415 31.1332C11.0586 31.202 11.197 31.3678
+                                11.1561 31.5211Z" fill="white"/><path d="M12.7104 31.6274C12.7104 31.7807 12.5342 31.9121
+                                12.3077 31.9152C12.0811 31.9183 11.8955 31.7932 11.8955 31.6399C11.8955 31.4866 12.0717
+                                31.3552 12.2982 31.3521C12.5247 31.349 12.7104 31.471 12.7104 31.6274Z" fill="white"/>
+                                <path d="M14.1584 31.3869C14.1868 31.5401 14.0295 31.6997 13.8029 31.7372C13.5764 31.7748
+                                13.3782 31.684 13.3499 31.5339C13.3216 31.3837 13.4852 31.2211 13.7054 31.1804C13.9256
+                                31.1397 14.1301 31.2336 14.1584 31.3869Z" fill="white"/></g><defs><clipPath
+                                id="clip0_884_4258"><rect width="38" height="38" fill="white"/></clipPath></defs></svg>
                         </a>
                     </div>
                 </div>

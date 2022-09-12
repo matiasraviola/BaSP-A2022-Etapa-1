@@ -1,23 +1,20 @@
-*{
-    margin:0px;
+body{
+    margin: 0;
 }
 body, html{
     font-family: 'Roboto';
 }
-@media (max-width:768px){
+/* @media (min-width:768px){
     aside{
         display: none;
     }
-    main, footer, header,{
+    main, footer, header{
         min-height: 100vh;
         flex-basis: 100%;
         margin:auto;
         padding:auto;
         align-items:start;
         flex-wrap: wrap;
-    }
-    header #text-container{
-       margin-left:0%
     }
     main #contact-area{
         padding: 0;
@@ -36,4 +33,7 @@ body, html{
         flex-direction: column;
     }
 
+    } */
+    @media (min-width:768px){
+        
     }
