@@ -10,6 +10,9 @@ main h2{
     font-size:40px;
     color:rgba(0, 0, 0, 1);
 }
+main h3:hover{
+    color: #F13312;;
+}
 .main-text-container{
     margin: 10px 20px;
 }
@@ -41,10 +44,24 @@ main h2{
 }
 .paragraph img{
    width: 100%;
-
 }
 #functionalities-area{
     margin: 10px 20px;
+}
+svg:hover rect{
+    stroke: #F13312;
+}
+svg:hover circle{
+    stroke: #F13312;
+}
+svg:hover line{
+    stroke: #F13312;
+}
+svg:hover path{
+    stroke: #F13312;
+}
+#money:hover{
+    fill:#F13312;
 }
 #functionalities-area h3{
     font-size: 30px ;
@@ -52,6 +69,10 @@ main h2{
 #functionalities-area p{
     font-size: 20px ;
     text-align: left;
+}
+.hourslog-text {
+    display: flex;
+    margin-bottom: 20px;
 }
 .flex-container{
     display: flex;
@@ -61,10 +82,6 @@ main h2{
 }
 body > div.flex-container{
     margin-left: 0px;
-}
-.hourslog-text {
-    display: flex;
-    margin-bottom: 20px;
 }
 .resourcemanag-text{
     display: flex;

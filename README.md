@@ -28,6 +28,7 @@ We write the html code for the web page, we also create a repository to keep saf
 We need to change the html to write the CSS code. In this part of the problem we recreate the aesthetics of the page that we designed in week #00 with Figma, only the landding page for a desktop.
 
 ### Week 03
+In this week, we add flexbox and media queries to make responsive our page and using github pages we can see the page online.
 
 Copyright © 2022 Radium Rocket. All right reserved
 
