@@ -1,6 +1,5 @@
 
 header{
-    /* display: flex; */
     width: 100%;
     background-image: url(../assets/header-back.png);
     background-position:center left;
@@ -10,7 +9,6 @@ header{
 header i{
     height: 15px;
     color:rgb(255, 112, 40);
-    /* background-color: rgb(255, 112, 40); */
 }
 /*Este id queda como unico hijo cel header pero es la unica manera que encontre de poner el efecto blur en todo el texto*/
 #blur-box{
@@ -76,5 +74,4 @@ header i{
         flex-direction: column;
         width: 50%;
     }
-
 }
