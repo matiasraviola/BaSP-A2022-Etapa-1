@@ -1,5 +1,6 @@
 
 header{
+    width: 100%;
     background-image: url(../assets/trackgenix.png);
     background-position:center left;
     background-repeat: no-repeat;
@@ -36,4 +37,32 @@ header{
 /*Agrego este nth-of-type para que se muestre como si fuera un enter como en figma*/
 #blur-box p:nth-of-type(2){
     margin-top: 10px;
+}
+@media (min-width:1025px){
+    header{
+        /* width:90%; */
+        display: flex;
+        justify-content: left;
+    }
+    header #blur-box{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin-left: 150px;
+}
+#blur-box h1{
+    width: 350px;
+}
+}
+@media (min-width:481px){
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header #blur-box{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
 }

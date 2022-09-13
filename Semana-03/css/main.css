@@ -1,5 +1,5 @@
 main {
-    /* margin-left: 10%; */
+    width: 100%;
 }
 main h2{
     width: 80%;
@@ -11,7 +11,7 @@ main h2{
     color:rgba(0, 0, 0, 1);
 }
 .main-text-container{
-   margin: 10px 20px;
+   margin: 10px 0px;
 }
 .main-text-container p{
     line-height: 30px;
@@ -53,6 +53,9 @@ main h2{
     flex-direction: column;
     width: 100%;
     margin-left: 20px;
+}
+body > div.flex-container{
+    margin-left: 0px;
 }
 .hourslog-text {
     display: flex;
@@ -161,4 +164,25 @@ form{
 }
 #categories-area ol{
     font-size: 8px;
+}
+@media(min-width:1024px){
+    body > div.flex-container{
+        margin-left: 10%;
+        width: 90%;
+    }
+}
+@media (min-width:481px){
+    #functionalities-flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #functionalities-flex-container svg{
+        width: 50%;
+        height:50%;
+    }
+    .hourslog-text, .reports-text, .resourcemanag-text, .multiplerole-text{
+        width: 50%;
+        margin-top: 20px;
+    }
 }
