@@ -87,6 +87,10 @@ form{
 #contact-area{
     margin: 10px 20px;
 }
+#ca-name-select{
+    width: 100%;
+    margin-left: 30px;
+}
 .contact-area-name{
     width: 90%;
     margin-bottom: 25px;
@@ -160,7 +164,6 @@ form{
     justify-content:space-around;
     align-items: center;
     height: 247px;
-    /* margin-top: 10px; */
     background-image: url(../assets/img.png/list-picture.png);
     background-position:center;
     background-repeat: no-repeat;
@@ -202,7 +205,28 @@ form{
     #categories-area{
         display: flex;
         width: 100%;
-        /* justify-content: space-around; */
+    }
+    #ca-name-select{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: 0px;;
+    }
+    .contact-area-name{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .contact-area-ca select{
+        width:100%;
+        height:37px;
+        margin-left: 20px;
+        color: rgba(55, 56, 103, 1);
+    }
+    .contact-area-email{
+        width:50%;
+        color: rgba(55, 56, 103, 1);
+        margin-bottom: 25px;
+        align-self: start;
     }
 }
 @media (min-width:481px){
@@ -244,5 +268,27 @@ form{
     }
     #categories-area{
         display: flex;
+    }
+    #ca-name-select{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: 0px;;
+    }
+    .contact-area-name{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .contact-area-ca select{
+        width:100%;
+        height:37px;
+        margin-left: 20px;
+        color: rgba(55, 56, 103, 1);
+    }
+    .contact-area-email{
+        width:50%;
+        color: rgba(55, 56, 103, 1);
+        margin-bottom: 25px;
+        align-self: start;
     }
 }

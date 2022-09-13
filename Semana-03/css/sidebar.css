@@ -8,34 +8,51 @@ aside{
     color: rgba(241, 51, 18, 1);
     font-size: 12px;
 }
+aside p{
+    padding-left: 10px;;
+}
 aside .home{
     display: flex;
-    margin-bottom: 10px;
+    padding: 20px 10px;
+}
+aside .home:hover{
+    color:#373867;
 }
 aside .sign-up{
     display: flex;
-    margin-bottom: 10px;
+    padding: 20px 10px;
+}
+aside .sign-up:hover{
+    color:#373867;
 }
 aside .login{
     display: flex;
-    margin-bottom: 10px;
+    padding: 20px 10px;
+}
+aside .login:hover{
+    color:#373867;
 }
 nav{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 12px;
+    margin-bottom: 170px;
 }
 aside .contact-us-email{
     display: flex;
     font-size: 8px;
+    padding: 10px 10px;
 }
 aside .contact-us-phone{
     display: flex;
+    padding: 10px 10px;;
     font-size: 8px;
 }
+
 aside .contact-us-address{
     display: flex;
+    padding: 10px 10px;;
     font-size: 8px;
 }
 @media (min-width:1024px) {
@@ -48,9 +65,11 @@ aside .contact-us-address{
         background-color: #FFFFFF;
         color: rgba(241, 51, 18, 1);
     }
-    aside .flex-container{
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* padding: 10px 20px; */
         margin-left: 0px;
-        justify-content: space-between;
     }
-
 }
