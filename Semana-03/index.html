@@ -11,38 +11,41 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/sidebar.css">
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src="https://kit.fontawesome.com/d7c9d962f7.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <aside>
             <img src="assets\icons\track-logo.png" alt="trackgenix">
-            <nav>
-                <a class="home">
-                    <img src="assets\icons\home-icon.png" alt="home">
-                    <p>Home</p>
-                </a>
-                <a class="sign-up">
-                    <img src="assets\icons\person.png" alt="person">
-                    <p>Sign Up</p>
-                </a>
-                <a class="login">
-                    <img src="assets\icons\person.png" alt="person">
-                    <p>Login</p>
+            <div class="flex-container">
+                <nav>
+                    <a class="home">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <p>Home</p>
                     </a>
-            </nav>
-            <div class="contact-us-email">
+                    <a class="sign-up">
+                        <i class="fa-sharp fa-solid fa-user"></i>
+                        <p>Sign Up</p>
+                    </a>
+                    <a class="login">
+                        <i class="fa-sharp fa-solid fa-user"></i>
+                        <p>Login</p>
+                        </a>
+                </nav>
                 <p>Contact Us</p>
-                <img src="assets\icons\message-icon.png" alt="envolope">
-                <p>trackgenix@gmail.com</p>
-            </div>
-            <div class="contact-us-phone">
-                <img src="assets\icons\call.png" alt="phone">
-                <p>(000) 000-0000</p>
-            </div>
-                <div class="contact-us-address">
-                    <img src="assets\icons\home-work.png" alt="adress">
-                    <p>1234 Somewhere Road #8254 Nashville,TN 00000-0000</p>
+                <div class="contact-us-email">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                    <p>trackgenix@gmail.com</p>
                 </div>
+                <div class="contact-us-phone">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <p>(000) 000-0000</p>
+                </div>
+                    <div class="contact-us-address">
+                        <i class="fa-sharp fa-solid fa-city"></i>
+                        <p>1234 Somewhere Road #8254 Nashville,TN 00000-0000</p>
+                    </div>
+            </div>
         </aside>
         <div class="flex-container">
             <header>
@@ -77,7 +80,7 @@
                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
                         took a galley of type and scrambled it to make a type specimen book.
                     </p>
-                    <p>
+                    <p id="green-text">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                         of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the
@@ -94,39 +97,47 @@
                 <section class="main-text-container">
                     <h2>Why choose us?</h2>
                     <div class="paragraph">
-                        <h3>Productivity Booster</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                            a galley of type and scrambled it to make a type specimen book.
-                        </p>
+                        <div class="text-tittle">
+                            <h3>Productivity Booster</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                                a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
                         <img src="assets\productivitybooster.png" alt="prodcutivity booster">
                     </div>
                     <div class="paragraph">
-                        <h3>Work Traceability</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                            a galley of type and scrambled it to make a type specimen book.
-                        </p>
+                        <div class="text-tittle">
+                            <h3>Work Traceability</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                                a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
                         <img src="assets\worktraceability.png" alt="work traceability">
                     </div>
                     <div class="paragraph">
-                        <h3>Leadership and team management</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                            a galley of type and scrambled it to make a type specimen book.
-                        </p>
+                        <div class="text-tittle">
+                            <h3>Leadership and team management</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                                a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
                         <img src="assets\leadership.png" alt="leadership">
                     </div>
                     <div class="paragraph">
-                        <h3>Decision making</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                            a galley of type and scrambled it to make a type specimen book.
-                        </p>
+                        <div class="text-tittle">
+                            <h3>Decision making</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                                a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
                         <img src="assets\decisions.png" alt="decisions">
                     </div>
                 </section>
@@ -259,9 +270,9 @@
                     </form>
                 </section>
                 <section id="categories-area">
-                    <div class="categories-area-product">
-                        <h4>Product</h4>
-                            <ol>
+                        <div class="categories-area-product">
+                             <h4>Product</h4>
+                             <ol>
                                 <li>Features</li>
                                 <li>Dowloads</li>
                                 <li>Integrations</li>
@@ -286,7 +297,7 @@
                                 <li>Contact</li>
                             </ol>
                         </div>
-                    </section>
+                </section>
             </main>
             <footer>
                     <div id="footer-socialm-incos" >

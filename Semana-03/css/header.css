@@ -42,17 +42,20 @@ header{
     header{
         /* width:90%; */
         display: flex;
-        justify-content: left;
+        /* justify-content: flex-start; */
     }
     header #blur-box{
         display: flex;
         flex-direction: column;
+        width: 20px;
+        /* margin-left: 50px; */
+    }
+    header #blur-box h1{
         width: 350px;
-        margin-left: 150px;
-}
-#blur-box h1{
-    width: 350px;
-}
+    }
+    header #blur-box h2{
+        width: 350px;
+    }
 }
 @media (min-width:481px){
     header{

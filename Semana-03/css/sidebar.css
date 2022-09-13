@@ -6,72 +6,50 @@ aside{
     height: 900px;
     background-color: #FFFFFF;
     color: rgba(241, 51, 18, 1);
-    float:left;
+    font-size: 12px;
 }
-aside img{
-    width: 100%;
-    margin-bottom: 30px;
+aside .home{
+    display: flex;
+    margin-bottom: 10px;
 }
-.home img{
-    margin: 0 0 0 0;
+aside .sign-up{
+    display: flex;
+    margin-bottom: 10px;
 }
-.home h4{
-    margin-top: -55px;
-    margin-left: 30px;
+aside .login{
+    display: flex;
+    margin-bottom: 10px;
 }
-.sign-up img{
-    margin-top:40px;
+nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
 }
-.sign-up h4{
-    margin-top: -55px;
-    margin-left: 30px;
+aside .contact-us-email{
+    display: flex;
+    font-size: 8px;
 }
-.login img{
-    margin-top:40px;
+aside .contact-us-phone{
+    display: flex;
+    font-size: 8px;
 }
-.login h4{
-    margin-top: -55px;
-    margin-left: 30px;
-    margin-bottom: 170px;
-}
-.contact-us-email h4{
-    width: 80px;
-    border-bottom:2px solid ;
-    font-size: 15px;
-}
-.contact-us-email img{
-    margin-top: 10px;
-}
-.contact-us-email h5{
-    margin-top: -55px;
-    margin-left: 30px;
-    font-size: 10px;
-}
-.contact-us-phone img{
-    margin-top: 30px;
-}
-.contact-us-phone h5{
-    margin-top: -50px;
-    margin-left:20px;
-    font-size: 10px;
-}
-.contact-us-address img{
-    margin-top: 30px;
-}
-.contact-us-address h5{
-    width: 100px;
-    margin-top: -50px;
-    margin-left:30px;
-    font-size: 10px;
+aside .contact-us-address{
+    display: flex;
+    font-size: 8px;
 }
 @media (min-width:1024px) {
     aside{
-        display: block;
+        display: flex;
+        flex-direction: column;
         position:fixed;
         width: 10%;
         height: 900px;
         background-color: #FFFFFF;
         color: rgba(241, 51, 18, 1);
-        float:left
-        }
+    }
+    aside .flex-container{
+        margin-left: 0px;
+        justify-content: space-between;
+    }
 }

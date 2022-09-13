@@ -18,7 +18,7 @@ main h2{
     text-align: center;
     font-size:18px;
 }
-.main-text-container p:last-child{
+#green-text{
     margin-bottom: 100px;
     color: rgba(73, 163, 123, 1);
 }
@@ -27,6 +27,7 @@ main h2{
     flex-wrap: wrap;
     width: 100%;
     color: rgba(0, 0, 0, 1);
+    justify-content: center;
 }
 .paragraph h3{
     width: 100%;
@@ -35,11 +36,12 @@ main h2{
     font-size:40px;
 }
 .paragraph p{
-    width: 70%;
     font:normal 30px;
+    justify-content: center;
 }
 .paragraph img{
-    max-width: 200px;
+   width: 100%;
+
 }
 #functionalities-area h3{
     font-size: 30px ;
@@ -170,8 +172,53 @@ form{
         margin-left: 10%;
         width: 90%;
     }
+    .text-tittle{
+        display: flex;
+        flex-direction: column;
+    }
+    .paragraph{
+        flex-wrap: nowrap;
+    }
+    .paragraph:nth-last-of-type(1){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(3){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph img{
+        height: 400px;
+    }
+    #categories-area{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 @media (min-width:481px){
+    .text-tittle{
+        display: flex;
+        flex-direction: column;
+    }
+    .paragraph{
+        flex-wrap: nowrap;
+    }
+    .paragraph:nth-last-of-type(1){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(3){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(1) h3{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(3) h3{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     #functionalities-flex-container{
         display: flex;
         flex-wrap: wrap;
@@ -184,5 +231,9 @@ form{
     .hourslog-text, .reports-text, .resourcemanag-text, .multiplerole-text{
         width: 50%;
         margin-top: 20px;
+    }
+    #categories-area{
+        display: flex;
+        
     }
 }
