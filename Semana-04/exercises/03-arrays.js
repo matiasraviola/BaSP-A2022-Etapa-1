@@ -1,4 +1,4 @@
-console.log('EXERCISE 3 :  ASRRAYS');
+console.log('EXERCISE 3 :  ARRAYS');
 
 /*
 a.Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
@@ -54,7 +54,7 @@ console.log(firstString);
 g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 */
 
-console.log('Exercise v3.g');
+console.log('Exercise 3.g');
 var fisrtArray = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
 "Noviembre", "Diciembre"];
 var secondArray=fisrtArray.slice(4,11);
