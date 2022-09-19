@@ -20,7 +20,7 @@ h4{
 h4:hover{
     color: rgb(255, 112, 40);
 }
-i{
+#menu{
     position: fixed;
     border-radius: 5px;
     margin-left: 10px;
@@ -30,4 +30,7 @@ i{
     height: 15px;
     border:1px solid rgb(255, 112, 40);
     color:rgb(255, 112, 40);
+}
+::placeholder{
+    font-family: 'Roboto';
 }
