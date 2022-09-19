@@ -1,22 +1,17 @@
 
 header{
-    /* width: 100%; */
+    width: 100%;
     background-image: url(../assets/header-back.png);
     background-position:center left;
     background-repeat: no-repeat;
     background-size: cover;
 }
-header i{
-    position: fixed;
-    height: 15px;
-    color:rgb(255, 112, 40);
-}
 /*Este id queda como unico hijo cel header pero es la unica manera que encontre de poner el efecto blur en todo el texto*/
 #blur-box{
-    width:100%;
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 30px 0px;
+    width:100%;
     background-color: rgba(00, 00, 00, 0.5);
     backdrop-filter: blur(2px);
     color: rgb(255,255,255);
@@ -29,13 +24,24 @@ header i{
     width:80%;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: rgba(255,255,255,0.75);
     font-size: 16px;
     line-height: 30px;
+    color: rgba(255,255,255,0.75);
 }
 /*Agrego este nth-of-type para que se muestre como si fuera un enter como en figma*/
 #blur-box p:nth-of-type(2){
     margin-top: 10px;
+}
+@media (min-width:481px){
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header #blur-box{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
 }
 @media (min-width:1024px){
     header{
@@ -56,17 +62,5 @@ header i{
     }
     header #blur-box h2{
         width: 350px;
-    }
-}
-
-@media (min-width:481px){
-    header{
-        display: flex;
-        justify-content: center;
-    }
-    header #blur-box{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
     }
 }

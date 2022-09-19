@@ -32,8 +32,9 @@ In this week, we add flexbox and media queries to make responsive our page and u
 https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
 
 ### Week 04
-This week we start with some exercises in JavaScrit
+This week we start with some exercises in JavaScrit.
 https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
+
 Copyright © 2022 Radium Rocket. All right reserved
 
 _By Matías Raviola_

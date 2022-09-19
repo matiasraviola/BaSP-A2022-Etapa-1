@@ -40,7 +40,12 @@ main h2{
     justify-content: center;
 }
 .paragraph img{
-   width: 100%;
+   /* max-width: 40%;
+   height: auto; */
+   display: flex;
+    flex: 1 1 0;
+    height: auto;
+    max-width: 40%;
 }
 #functionalities-area{
     margin: 10px 20px;
@@ -177,7 +182,7 @@ form{
 }
 
 @media (min-width:481px){
-    .text-tittle{
+    .text-title{
         display: flex;
         flex-direction: column;
     }
@@ -250,7 +255,7 @@ form{
         margin-left: 10%;
         width: 90%;
     }
-    .text-tittle{
+    .text-title{
         display: flex;
         flex-direction: column;
     }
