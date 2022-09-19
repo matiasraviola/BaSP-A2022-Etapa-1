@@ -41,8 +41,8 @@ nav{
 }
 .contact-us-email{
     display: flex;
-    font-size: 8px;
     padding: 10px 10px;
+    font-size: 8px;
 }
 .contact-us-phone{
     display: flex;
@@ -68,7 +68,7 @@ nav{
     .flex-container{
         display: flex;
         flex-direction: column;
-        width: 100%;
         margin-left: 0px;
+        width: 100%;
     }
 }

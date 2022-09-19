@@ -1,32 +1,25 @@
 
 header{
-    width: 100%;
+    /* width: 100%; */
     background-image: url(../assets/header-back.png);
     background-position:center left;
     background-repeat: no-repeat;
     background-size: cover;
 }
 header i{
+    position: fixed;
     height: 15px;
     color:rgb(255, 112, 40);
 }
 /*Este id queda como unico hijo cel header pero es la unica manera que encontre de poner el efecto blur en todo el texto*/
 #blur-box{
+    width:100%;
     display: flex;
     flex-direction: column;
     padding: 30px 20px;
     background-color: rgba(00, 00, 00, 0.5);
     backdrop-filter: blur(2px);
     color: rgb(255,255,255);
-}
-#blur-box h1{
-    justify-content: start;
-    width: 90%;
-    padding-bottom: 10px;
-    border-bottom: 2px rgb(170,206,155) solid;
-    line-height: 30px;
-    font-weight: bold;
-    font-size: 40px;
 }
 #blur-box h2{
     margin-top: 20px;
@@ -55,7 +48,8 @@ header i{
     header #blur-box{
         display: flex;
         flex-direction: column;
-        width: 20px;
+        width: 500px;
+        margin-left: 50px;
     }
     header #blur-box h1{
         width: 350px;
@@ -64,6 +58,7 @@ header i{
         width: 350px;
     }
 }
+
 @media (min-width:481px){
     header{
         display: flex;
