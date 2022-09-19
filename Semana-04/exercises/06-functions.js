@@ -62,7 +62,7 @@ a entero (redondeado).
 */
 
 console.log('Exercise 6.d');
-var firstNumber = 25.05;
+var firstNumber = 25;
 var secondNumber = 24;
 function thirdFunction (firstNumber, secondNumber){
     var resultFunc;
@@ -92,6 +92,8 @@ probando que todo siga funcionando igual.
 */
 
 console.log('Exercise 6.e');
+var firstNumber = 25.05;
+var secondNumber = 24;
 function validateInteger2 (thirdNumber){
     if (Number.isInteger(thirdNumber) != true){
         integerNumber=Math.round(thirdNumber);
@@ -100,17 +102,11 @@ function validateInteger2 (thirdNumber){
         return thirdNumber;
     }
 }
-function fourthFunction (firstNumber, secondNumber){
+function firstFunction (firstNumber, secondNumber){
     var resultFunc;
-    if (typeof(firstNumber) != 'number' && typeof(secondNumber) != 'number'){
-    alert('¡One of the parameters used has an error!');
-    return NaN;
-    }
-    else{
-        firstNumber = validateInteger2 (firstNumber);
-        secondNumber = validateInteger2 (secondNumber);
-        resultFunc = firstNumber + secondNumber;
-        return resultFunc;
-    }
+    firstNumber = validateInteger2 (firstNumber);
+    secondNumber = validateInteger2 (secondNumber);
+    resultFunc = firstNumber + secondNumber;
+    return resultFunc;
 }
-console.log(fourthFunction (firstNumber, secondNumber));
+console.log(firstFunction (firstNumber, secondNumber));

@@ -5,13 +5,13 @@ a.Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), s
 mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”.
 */
 
-// console.log('Exercise 4.a');
-// var randomNumber = Math.random()*1;
-// if (randomNumber >= 0.5){
-//    alert('Greater than 0,5');
-// }else{
-//    alert('Lower than 0,5')
-// }
+console.log('Exercise 4.a');
+var randomNumber = Math.random()*1;
+if (randomNumber >= 0.5){
+   alert('Greater than 0,5');
+}else{
+   alert('Lower than 0,5')
+}
 
 /*
 b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
