@@ -5,13 +5,13 @@ a.Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), s
 mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”.
 */
 
-console.log('Exercise 3.a');
-var randomNumber = Math.random()*1;
-if (randomNumber >= 0.5){
-   alert('Greater than 0,5');
-}else{
-   alert('Lower than 0,5')
-}
+// console.log('Exercise 4.a');
+// var randomNumber = Math.random()*1;
+// if (randomNumber >= 0.5){
+//    alert('Greater than 0,5');
+// }else{
+//    alert('Lower than 0,5')
+// }
 
 /*
 b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
@@ -24,20 +24,30 @@ VI. “Adulto mayor” entre 61 y 75 años;
 VII. “Anciano” si es mayor a 75 años.
 */
 
-console.log('Exercise 3.b');
-randomNumber = Math.random()*100;
-if (randomNumber < 2){
+console.log('Exercise 4.b');
+var age = Math.random()*100;
+switch (true){
+    case (age<=2):
         alert('Bebé');
-    }else if (randomNumber > 2 && randomNumber < 12){
+        break;
+    case (age > 2 && age <= 12):
         alert('Niño');
-    }else if (randomNumber > 13 && randomNumber < 19){
+        break;
+    case (age > 13 && age <= 19):
         alert('Adolencente');
-    }else if (randomNumber > 20 && randomNumber < 30){
+        break;
+    case (age > 20 && age <= 30):
         alert('Joven');
-    }else if (randomNumber > 31 && randomNumber < 60){
-        alert('Adulto');
-    }else if (randomNumber > 61 && randomNumber < 75){
+        break;
+    case (age > 31 && age <= 60):
+       alert('Adulto');
+       break;
+    case (age > 61 && age < 75):
         alert('Adulto mayor');
-    }else if (randomNumber >= 75){
+        break;
+    case (age >= 75):
         alert('Anciano');
+        break;
+    default:
+        break;
     }
