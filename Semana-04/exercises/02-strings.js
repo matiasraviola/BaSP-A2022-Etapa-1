@@ -4,8 +4,9 @@ console.log('EXERCISE 2 :  STRINGS');
 (utilizar toUpperCase). */
 
 console.log('Exercise 2.a');
+var result2A
 var firstString = 'abecedario';
-var resultA = firstString.toUpperCase();
+var result2A = firstString.toUpperCase();
 console.log(result2A);
 
 /*
@@ -15,7 +16,7 @@ guardando el resultado en una nueva variable (utilizar substring).
 
 console.log('Exercise 2.b');
 var secondString = 'abecedario';
-var resultB = secondString.substring(0,5);
+var result2B = secondString.substring(0,5);
 console.log(result2B);
 
 /*
@@ -25,7 +26,7 @@ guardando el resultado en una nueva variable (utilizar substring).
 
 console.log('Exercise 2.c');
 var thirdString = 'abecedario';
-var resultC = thirdString.substring(5,10);
+var result2C = thirdString.substring(5,10);
 console.log(result2C);
 
 /*
@@ -38,7 +39,7 @@ console.log('Exercise 2.d');
 var fourthString = 'abecedario';
 var fifthString = fourthString.substring(0,1).toUpperCase();
 var sixthString = fourthString.substring(1,10).toLowerCase();
-var resultD = fifthString + sixthString;
+var result2D = fifthString + sixthString;
 console.log(result2D);
 
 /*
@@ -48,7 +49,7 @@ del primer espacio en blanco y guardarla en una variable (utilizar indexOf).
 
 console.log('Exercise 2.e');
 var seventhString = 'abece dario';
-var resultE = seventhString.indexOf(' ');
+var result2E = seventhString.indexOf(' ');
 console.log(result2E);
 
 /*
