@@ -2,6 +2,8 @@ header{
     display: flex;
     justify-content: center;
     padding: 10px 0px;
+    background-color: rgb(170,206,155);
+    background-image: none;
 }
 h1{
     text-align: center;
@@ -46,10 +48,13 @@ h3{
     font-size: 10px;
     font-weight:bold;
 }
-main #pass-forgot p{
-    align-items: flex-start;
-}
+#pass-forgot{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
 
+}
 #button-login{
     height: auto;
     width: 50%;
