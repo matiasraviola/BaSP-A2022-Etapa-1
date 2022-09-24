@@ -35,6 +35,10 @@ https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
 This week we start with some exercises in JavaScrit and html, css and flexbox corrections.
 https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
+## Week 06
+
+
+
 Copyright © 2022 Radium Rocket. All right reserved
 
 _By Matías Raviola_

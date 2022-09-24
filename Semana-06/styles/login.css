@@ -71,3 +71,7 @@ h3{
 .label-input p{
     color:#F33413 ;
 }
+#show-password{
+    font-size: 10px;
+    font-weight:lighter;
+}
