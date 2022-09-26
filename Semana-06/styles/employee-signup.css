@@ -1,0 +1,6 @@
+fieldset{
+    display: flex;
+    flex-direction: column;
+    color: #373867;
+    width: 70%;
+}
