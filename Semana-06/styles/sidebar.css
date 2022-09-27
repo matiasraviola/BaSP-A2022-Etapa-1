@@ -18,39 +18,39 @@ nav{
     font-size: 12px;
     margin-bottom: 170px;
 }
-.home{
+#home{
     display: flex;
     padding: 20px 10px;
 }
-.home:hover{
+#home:hover{
     color:#373867;
 }
-.sign-up{
+#sign-up{
     display: flex;
     padding: 20px 10px;
 }
-.sign-up:hover{
+#sign-up:hover{
     color:#373867;
 }
-.login{
+#login{
     display: flex;
     padding: 20px 10px;
 }
-.login:hover{
+#login:hover{
     color:#373867;
 }
-.contact-us-email{
+#contact-us-email{
     display: flex;
     padding: 10px 10px;
     font-size: 8px;
 }
-.contact-us-phone{
+#contact-us-phone{
     display: flex;
     padding: 10px 10px;;
     font-size: 8px;
 }
 
-.contact-us-address{
+#contact-us-address{
     display: flex;
     padding: 10px 10px;;
     font-size: 8px;
