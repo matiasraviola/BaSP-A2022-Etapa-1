@@ -1,56 +1,66 @@
 window.onload = function(){
-    // email
-    var email = document.getElementById('email');
-    var alert9 = document.createElement('p');
-    alert9.innerHTML = 'Invalid Email';
-    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    // pasword 1
-    var pw1 = document.getElementById ('pw1');
-    var alert10 = document.createElement('p');
-    alert10.innerHTML = 'Invalid password';
-    // password 2
-    var pw2 = document.getElementById('pw2');
-    var alert11 = document.createElement('p');
-    alert11.innerHTML = "Passwords don't match";
-    var alert12 = document.createElement('p');
-    alert12.innerHTML = "No spaces alowed";
-   //----------------------------
     var button = document.getElementById('btn-create');
     var arrayInput = [];
-    // name
+
     var name = document.getElementById('name');
     var alert0 = document.createElement('p');
     alert0.innerHTML = 'Invalid Name';
-    // last name
+
     var lName = document.getElementById('last-name');
     var alert1 = document.createElement('p');
     alert1.innerHTML = 'Invalid last name';
-    // id
+
     var id = document.getElementById('id');
     var alert2 = document.createElement('p');
     alert2.innerHTML = "Invalid Id";
-    // date of birth
+
     var dob = document.getElementById('date');
     var alert3 = document.createElement('p');
     alert3.innerHTML = "Invalid Date";
-    // TELEPHONE
+
     var tel = document.getElementById('telephone');
     var alert4 = document.createElement('p');
     alert4.innerHTML = "Invalid Telephone";
-    // ADDREES
+
     var address = document.getElementById('address');
     var alert5 = document.createElement('p');
     alert5.innerHTML = "Invalid Address";
-    //LOCATION
+
     var location = document.getElementById('location');
     var alert6 = document.createElement ('p');
     alert6.innerHTML = 'Invaliz Location';
-    //ZIP
+
     var zip = document.getElementById('zip');
     var alert7 = document.createElement('p');
     alert7.innerHTML = "Invalid ZIP code";
 
-    //VALIDATION NAME
+    var email = document.getElementById('email');
+    var alert8 = document.createElement('p');
+    alert8.innerHTML = 'Invalid Email';
+    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+    var pw1 = document.getElementById ('pw1');
+    var alert9 = document.createElement('p');
+    alert9.innerHTML = 'Invalid password';
+
+    var pw2 = document.getElementById('pw2');
+    var alert10 = document.createElement('p');
+    alert10.innerHTML = "Passwords don't match";
+    var alert11 = document.createElement('p');
+    alert11.innerHTML = "No spaces alowed";
+    //alert0 and arrayInput[0] --> name
+    //alert1 and arrayInput[1] --> last name
+    //alert2 and arrayInput[2] --> id
+    //alert3 and arrayInput[3] --> date
+    //alert4 and arrayInput[4] --> telephone
+    //alert5 and arrayInput[5] --> address
+    //alert6 and arrayInput[6] --> location
+    //alert7 and arrayInput[7] --> zip code
+    //alert8 and arrayInput[8] --> email
+    //alert9 and arrayInput[9] --> pw
+    //alert10, alert 11 and arrayInput[10] --> repeat pw
+
+
     name.onblur = function(){
         if(name.value.length < 3){
             name.classList.add("red-border");
@@ -64,6 +74,7 @@ window.onload = function(){
             return false
         }else{
             name.classList.add("green-border");
+            arrayInput[0] = 'Name: Successful';
             return true
         }
     }
@@ -82,7 +93,7 @@ window.onload = function(){
         }
         return true
     }
-    // VALIDATION LAST NAME
+
     lName.onblur = function(){
         if(lName.value.length < 3){
             lName.classList.add("red-border");
@@ -96,6 +107,7 @@ window.onload = function(){
             return false
         }else{
             lName.classList.add("green-border");
+            arrayInput[1] = 'Last Name: Successful';
             return true
         }
     }
@@ -106,7 +118,7 @@ window.onload = function(){
             lName.parentNode.removeChild(alert1);
         }
     }
-    // VALIDATION ID
+
     id.onblur = function (){
         if (id.value.length < 8){
             id.classList.add("red-border");
@@ -120,6 +132,7 @@ window.onload = function(){
             return false
         }else{
             id.classList.add("green-border");
+            arrayInput[2] = 'ID: Successful';
             return true
         }
     }
@@ -131,7 +144,6 @@ window.onload = function(){
         }
     }
 
-    // VALIDATION DATE OF BIRTH
     dob.onblur = function (){
         if (dob.value == ''){
             dob.classList.add("red-border");
@@ -140,6 +152,7 @@ window.onload = function(){
             return false
         }else{
             dob.classList.add("green-border");
+            arrayInput[3] = 'Date: Successful';
             return true
         }
         }
@@ -150,7 +163,7 @@ window.onload = function(){
             dob.parentNode.removeChild(alert3);
         }
     }
-    // VALIDATION TELEPHONE
+
     tel.onblur = function(){
             if (tel.value.length != 10){
                 tel.classList.add("red-border");
@@ -164,6 +177,7 @@ window.onload = function(){
                 return false
             }else{
                 tel.classList.add("green-border");
+                arrayInput[4] = 'Telephone: Successful';
                 return true
             }
         }
@@ -174,7 +188,7 @@ window.onload = function(){
                 tel.parentNode.removeChild(alert4);
             }
         }
-    // VALIDATION ADDRESS
+
         address.onblur = function(){
             lett=0;
             num=0;
@@ -200,6 +214,8 @@ window.onload = function(){
                 return false
             }else{
                 address.classList.add("green-border");
+                arrayInput[5] = 'Address: Successful';
+
                 return true
             }
             function letNumSpaceValidation(stringLetter){
@@ -214,7 +230,7 @@ window.onload = function(){
                 }
                 return true;
                 }
-        }
+            }
         address.onfocus = function (){
             address.classList.remove("green-border");
             address.classList.remove("red-border");
@@ -222,8 +238,8 @@ window.onload = function(){
                 address.parentNode.removeChild(alert5);
             }
         }
-    // VALIDATION LOCATION
-    location.onblur = function (){
+
+        location.onblur = function (){
         lett = 0;
         num = 0;
         if (location.value.length < 3){
@@ -243,6 +259,7 @@ window.onload = function(){
             return false
         }else{
             location.classList.add("green-border");
+            arrayInput[6] = 'Location: Successful';
             return true
         }
         function letNumValidation(stringLetter){
@@ -265,7 +282,7 @@ window.onload = function(){
             location.parentNode.removeChild(alert6);
         }
     }
-    // VALIDATION  ZIP CODE
+
     zip.onblur = function (){
         if (zip.value.length < 4 || zip.value.length > 5){
             zip.classList.add("red-border");
@@ -279,6 +296,7 @@ window.onload = function(){
             return false
         }else{
             zip.classList.add("green-border");
+            arrayInput[7] = 'Zip Code: Successful';
             return true
         }
     }
@@ -289,63 +307,65 @@ window.onload = function(){
             zip.parentNode.removeChild(alert7);
         }
     }
-    // VALIDATION EMAIL
+
     email.onblur = function (){
         if (!emailExpression.test(email.value)){
             email.classList.add("red-border");
-            email.parentNode.insertBefore(alert9, email.nextElementSibling);
-            arrayInput[9] = 'Email: Invalid Email';
+            email.parentNode.insertBefore(alert8, email.nextElementSibling);
+            arrayInput[8] = 'Email: Invalid Email';
             return false;
         }else if (email.value == ''){
             email.classList.add("red-border");
-            email.parentNode.insertBefore(alert9, email.nextElementSibling);
-            arrayInput[9] = 'Email: No spaces alowed!';
+            email.parentNode.insertBefore(alert8, email.nextElementSibling);
+            arrayInput[8] = 'Email: No spaces alowed!';
             return false;
         }else {
             email.classList.add("green-border");
-            if (email.parentNode.contains(alert9)){
-                email.parentNode.removeChild(alert9);
+            if (email.parentNode.contains(alert8)){
+                email.parentNode.removeChild(alert8);
             }
+            arrayInput[8] = 'Email: Successful';
             return true;
         }
         }
     email.onfocus = function (){
         email.classList.remove("green-border");
         email.classList.remove("red-border");
-        if (email.parentNode.contains(alert9)){
-            email.parentNode.removeChild(alert9);
+        if (email.parentNode.contains(alert8)){
+            email.parentNode.removeChild(alert8);
         }
     }
-    // VALIDATION PW
+
     pw1.onblur = function (){
         var upper = 0;
         var lower = 0;
         var num  = 0;
         if (pw1.value.length < 8){
             pw1.classList.add("red-border");
-            pw1.parentNode.insertBefore(alert10, pw1.nextElementSibling);
-            arrayInput[10] = 'Password: Need more characters';
+            pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
+            arrayInput[9] = 'Password: Need more characters';
             return false;
 
         }else if (letterNumberValidation(pw1.value) == false ){
             pw1.classList.add("red-border");
-            pw1.parentNode.insertBefore(alert10, pw1.nextElementSibling);
-            arrayInput[10] = 'Passwrod: Invalid password';
+            pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
+            arrayInput[9] = 'Passwrod: Invalid password';
             return false;
         }
         else if (num==0 || upper==0 || lower==0){
             pw1.classList.add("red-border");
-            pw1.parentNode.insertBefore(alert10, pw1.nextElementSibling);
-            arrayInput[10] = 'Password: Invalid password';
+            pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
+            arrayInput[9] = 'Password: Invalid password';
             return false;
         } else{
             pw1.classList.add("green-border");
-            if (pw1.parentNode.contains(alert10)){
-                pw1.parentNode.removeChild(alert10);
+            arrayInput[9] = 'Password: Successful';
+            if (pw1.parentNode.contains(alert9)){
+                pw1.parentNode.removeChild(alert9);
             }
             return true;
         }
-        // FUNCTIONS VALIDATIONS
+
         function letterNumberValidation(stringLetter){
             for (i=0; i < stringLetter.length; i++){
                 if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
@@ -375,47 +395,63 @@ window.onload = function(){
     pw1.onfocus = function (){
         pw1.classList.remove("green-border");
         pw1.classList.remove("red-border");
-        if (pw1.parentNode.contains(alert10)){
-            pw1.parentNode.removeChild(alert10);
+        if (pw1.parentNode.contains(alert9)){
+            pw1.parentNode.removeChild(alert9);
         }
     }
     pw2.onblur = function (){
         if (pw1.value != pw2.value){
             pw2.classList.add("red-border");
-            pw2.parentNode.insertBefore(alert11, pw2.nextElementSibling);
+            pw2.parentNode.insertBefore(alert10, pw2.nextElementSibling);
             arrayInput[10] = "Password: Passwords don't match";
             return false;
         }else if(pw2.value == ''){
             pw2.classList.add("red-border");
-            pw2.parentNode.insertBefore(alert12, pw2.nextElementSibling);
+            pw2.parentNode.insertBefore(alert11, pw2.nextElementSibling);
             arrayInput[10] = 'Password: No spaces alowed!';
             return false;
 
         }else{
             pw2.classList.add("green-border");
-            if (pw2.parentNode.contains(alert11)){
-                pw2.parentNode.removeChild(alert11);
+            if (pw2.parentNode.contains(alert10)){
+                pw2.parentNode.removeChild(alert10);
             }
+            arrayInput[10] = 'Repeat Password: Successful';
             return true;
         }
     }
     pw2.onfocus = function (){
-        pw1.classList.remove("green-border");
-        pw1.classList.remove("red-border");
+        pw2.classList.remove("green-border");
+        pw2.classList.remove("red-border");
+        if (pw2.parentNode.contains(alert10)){
+            pw2.parentNode.removeChild(alert10);
+        }
         if (pw2.parentNode.contains(alert11)){
             pw2.parentNode.removeChild(alert11);
         }
-        if (pw2.parentNode.contains(alert12)){
-            pw2.parentNode.removeChild(alert12);
-        }
     }
     button.onclick = function(){
-        var resultPass = pw1.onblur (pw1.value);
+        var resultName = name.onblur(name.value);
+        var resultlName = lName.onblur(lName.value);
+        var resultId = id.onblur(id.value);
+        var resultDob = dob.onblur(dob.value);
+        var resultTel = tel.onblur(tel.value);
+        var resultAddress = address.onblur (address.value);
+        var resultLoc = location.onblur(location.value);
+        var resultZip = zip.onblur(zip.value);
         var resultEmail= email.onblur(email.value);
-        if (resultPass == true || resultEmail == true){
-            alert('Welcome to Trackgenix');
+        var resultPass1 = pw1.onblur (pw1.value);
+        var resultPass2 = pw2.onblur (pw2.value);
+        if (resultName == true || resultlName == true || resultId == true || resultDob == true || resultTel == true ||
+            resultAddress == true || resultLoc ==true || resultZip == true || resultPass2 == true ||resultPass1 == true
+            || resultEmail == true ){
+            alert('Welcome to Trackgenix :\n' + arrayInput[0]+"\n" + arrayInput[1]+"\n"+ arrayInput[2]+"\n"+ arrayInput[3]+"\n"
+            + arrayInput[4]+"\n"+ arrayInput[5]+"\n"+ arrayInput[6]+"\n"+ arrayInput[7]+"\n"+ arrayInput[8]+"\n"+ arrayInput[9]+"\n"
+            + arrayInput[10]);
         }else{
-            alert('Something goes wrong: '+ arrayInput[0]+' '+ arrayInput[1]);
+            alert('Something goes wrong: ' + arrayInput[0]+"\n" + arrayInput[1]+"\n"+ arrayInput[2]+"\n"+ arrayInput[3]+"\n"
+            + arrayInput[4]+"\n"+ arrayInput[5]+"\n"+ arrayInput[6]+"\n"+ arrayInput[7]+"\n"+ arrayInput[8]+"\n"+ arrayInput[9]+"\n"
+            + arrayInput[10]);
         }
     }
     console.log('hola');
