@@ -74,13 +74,11 @@ window.onload = function(){
                     }else{
                         lower++;
                     }
-                }else{
-                        if (numberValidation (stringLetter.charAt(i)) == true){
+                }else if (numberValidation (stringLetter.charAt(i)) == true){
                         num++;
                     } else{
                         return false;
                 }
-            }
             }
             return true;
             }
@@ -109,7 +107,7 @@ window.onload = function(){
         var resultPass = password.onblur (password.value);
         var resultEmail= email.onblur(email.value);
         if (resultPass == true || resultEmail == true){
-            alert('Welcome to Trackgenix');
+            alert('Welcome to Trackgenix ');
         }else{
             alert('Something goes wrong: '+ arrayInput[0]+' '+ arrayInput[1]);
         }

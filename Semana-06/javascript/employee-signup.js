@@ -37,6 +37,16 @@ window.onload = function(){
     var tel = document.getElementById('telephone');
     var alert4 = document.createElement('p');
     alert4.innerHTML = "Invalid Telephone";
+    //ZIP
+    var zip = document.getElementById('zip');
+    var alert7 = document.createElement('p');
+    alert7.innerHTML = "Invalid ZIP code";
+    //LOCATION
+    var location = document.getElementById('location');
+    var alert6 = document.createElement ('p');
+    alert6.innerHTML = 'Invaliz Location';
+    // ADDREES
+
 
     //VALIDATION NAME
     name.onblur = function(){
@@ -104,7 +114,7 @@ window.onload = function(){
         }else if(validationNames (id.value) != false){
             id.classList.add("red-border");
             id.parentNode.insertBefore(alert2, id.nextElementSibling);
-            arrayInput[2] = 'ID: Invalid Id';
+            arrayInput[2] = 'ID: Only Numbers';
             return false
         }else{
             id.classList.add("green-border");
@@ -148,7 +158,7 @@ window.onload = function(){
             }else if(validationNames (tel.value) != false){
                 tel.classList.add("red-border");
                 tel.parentNode.insertBefore(alert4, tel.nextElementSibling);
-                arrayInput[4] = 'Telephone: Invalid telephone';
+                arrayInput[4] = 'Telephone: Only Numbers';
                 return false
             }else{
                 tel.classList.add("green-border");
@@ -162,7 +172,73 @@ window.onload = function(){
                 tel.parentNode.removeChild(alert4);
             }
         }
-     // VALIDATION EMAIL
+    // VALIDATION ADDRESS
+
+    // VALIDATION LOCATION
+    location.onblur = function (){
+        lett = 0;
+        num = 0;
+        if (locationValidation(location.value) == false){
+            location.classList.add("red-border");
+            location.parentNode.insertBefore(alert6, location.nextElementSibling);
+            arrayInput[6] = 'Location: Invalid Location';
+            return false
+        }else if (lett == 0 || lett < 4 || num == 0){
+            location.classList.add("red-border");
+            location.parentNode.insertBefore(alert6, location.nextElementSibling);
+            arrayInput[6] = 'Location: Invalid Location';
+            return false
+        }else{
+            location.classList.add("green-border");
+            return true
+        }
+
+
+        function locationValidation(stringLetter){
+            for (i=0; i < stringLetter.length; i++){
+                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                    lett++
+                }else if (numberValidation (stringLetter.charAt(i)) == true){
+                        num++;
+                } else{
+                        return false;
+                }
+            }
+            return true;
+            }
+    }
+    location.onfocus = function (){
+        location.classList.remove("green-border");
+        location.classList.remove("red-border");
+        if (location.parentNode.contains(alert6)){
+            location.parentNode.removeChild(alert6);
+        }
+    }
+    // VALIDATION  ZIP CODE
+    zip.onblur = function (){
+        if (zip.value.length < 4 || zip.value.length > 5){
+            zip.classList.add("red-border");
+            zip.parentNode.insertBefore(alert7, zip.nextElementSibling);
+            arrayInput[7] = 'Zip Code: ';
+            return false
+        }else if(validationNames (zip.value) != false){
+            zip.classList.add("red-border");
+            zip.parentNode.insertBefore(alert7, zip.nextElementSibling);
+            arrayInput[7] = 'Zip Code: Only Numbers';
+            return false
+        }else{
+            zip.classList.add("green-border");
+            return true
+        }
+    }
+    zip.onfocus = function (){
+        zip.classList.remove("green-border");
+        zip.classList.remove("red-border");
+        if (zip.parentNode.contains(alert7)){
+            zip.parentNode.removeChild(alert7);
+        }
+    }
+    // VALIDATION EMAIL
     email.onblur = function (){
         if (!emailExpression.test(email.value)){
             email.classList.add("red-border");
@@ -227,24 +303,22 @@ window.onload = function(){
                     }else{
                         lower++;
                     }
-                }else{
-                        if (numberValidation (stringLetter.charAt(i)) == true){
+                }else if (numberValidation (stringLetter.charAt(i)) == true){
                         num++;
                     } else{
                         return false;
                 }
             }
-            }
             return true;
             }
-            function numberValidation (stringNumber){
-                var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-                    if(numbers.includes(stringNumber)){
-                        return true
-                    }else{
-                        return false
-                    }
-            }
+        }
+        function numberValidation (stringNumber){
+            var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+                if(numbers.includes(stringNumber)){
+                    return true
+                }else{
+                    return false
+                }
         }
 
     pw1.onfocus = function (){
