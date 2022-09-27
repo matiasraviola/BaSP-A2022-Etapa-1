@@ -37,16 +37,18 @@ window.onload = function(){
     var tel = document.getElementById('telephone');
     var alert4 = document.createElement('p');
     alert4.innerHTML = "Invalid Telephone";
-    //ZIP
-    var zip = document.getElementById('zip');
-    var alert7 = document.createElement('p');
-    alert7.innerHTML = "Invalid ZIP code";
+    // ADDREES
+    var address = document.getElementById('address');
+    var alert5 = document.createElement('p');
+    alert5.innerHTML = "Invalid Address";
     //LOCATION
     var location = document.getElementById('location');
     var alert6 = document.createElement ('p');
     alert6.innerHTML = 'Invaliz Location';
-    // ADDREES
-
+    //ZIP
+    var zip = document.getElementById('zip');
+    var alert7 = document.createElement('p');
+    alert7.innerHTML = "Invalid ZIP code";
 
     //VALIDATION NAME
     name.onblur = function(){
@@ -173,17 +175,68 @@ window.onload = function(){
             }
         }
     // VALIDATION ADDRESS
-
+        address.onblur = function(){
+            lett=0;
+            num=0;
+            if (address.value.length < 5){
+                address.classList.add("red-border");
+                address.parentNode.insertBefore(alert5, address.nextElementSibling);
+                arrayInput[5] = 'Address: Need more';
+                return false
+            }else if(letNumSpaceValidation (address.value) == false){
+                address.classList.add("red-border");
+                address.parentNode.insertBefore(alert5, address.nextElementSibling);
+                arrayInput[5] = 'Address: Need number and letters';
+                return false
+            }else if(lett == 0 || num==0){
+                address.classList.add("red-border");
+                address.parentNode.insertBefore(alert5, address.nextElementSibling);
+                arrayInput[5] = 'Address: Need more';
+                return false
+            }else if(address.value.substring(0,1) == ' ' || address.value.substring(address.value.length - 1) == ' '){
+                address.classList.add("red-border");
+                address.parentNode.insertBefore(alert5, address.nextElementSibling);
+                arrayInput[5] = "Address: You can't star/finish with a withe spaces";
+                return false
+            }else{
+                address.classList.add("green-border");
+                return true
+            }
+            function letNumSpaceValidation(stringLetter){
+                for (i=0; i < stringLetter.length; i++){
+                    if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                        lett++
+                    }else if (numberValidation (stringLetter.charAt(i)) == true){
+                        num++;
+                    } else if (stringLetter.charAt(i) != ' '){
+                        return false;
+                    }
+                }
+                return true;
+                }
+        }
+        address.onfocus = function (){
+            address.classList.remove("green-border");
+            address.classList.remove("red-border");
+            if (address.parentNode.contains(alert5)){
+                address.parentNode.removeChild(alert5);
+            }
+        }
     // VALIDATION LOCATION
     location.onblur = function (){
         lett = 0;
         num = 0;
-        if (locationValidation(location.value) == false){
+        if (location.value.length < 3){
+            location.classList.add("red-border");
+            location.parentNode.insertBefore(alert6, location.nextElementSibling);
+            arrayInput[6] = 'Location: need more characters';
+            return false
+        }else if(letNumValidation(location.value) == false){
             location.classList.add("red-border");
             location.parentNode.insertBefore(alert6, location.nextElementSibling);
             arrayInput[6] = 'Location: Invalid Location';
             return false
-        }else if (lett == 0 || lett < 4 || num == 0){
+        }else if (lett < 4 || num == 0){
             location.classList.add("red-border");
             location.parentNode.insertBefore(alert6, location.nextElementSibling);
             arrayInput[6] = 'Location: Invalid Location';
@@ -192,9 +245,7 @@ window.onload = function(){
             location.classList.add("green-border");
             return true
         }
-
-
-        function locationValidation(stringLetter){
+        function letNumValidation(stringLetter){
             for (i=0; i < stringLetter.length; i++){
                 if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
                     lett++
