@@ -335,7 +335,6 @@ window.onload = function(){
             email.parentNode.removeChild(alert8);
         }
     }
-
     pw1.onblur = function (){
         var upper = 0;
         var lower = 0;

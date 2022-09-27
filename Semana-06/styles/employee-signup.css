@@ -1,8 +1,23 @@
-fieldset{
+form#form-signup{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+fieldset{
     color: #373867;
-    width: 70%;
+    width: 100%;
+}
+fieldset p{
+    color:#F33413 ;
+}
+label{
+    display: block;
+}
+input{
+    width: 100%;
+    box-sizing: border-box;
 }
 #btn-create{
     height: 40px;
@@ -17,6 +32,13 @@ fieldset{
 .red-border{
     border: 3px solid #F33413;
 }
-fieldset p{
-    color:#F33413 ;
+@media(min-width:480px){
+    fieldset{
+        width: 45%;
+    }
+}
+@media(min-width:1024px){
+    fieldset{
+        width: 45%;
+    }
 }

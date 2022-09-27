@@ -255,6 +255,9 @@ form{
         margin-left: 10%;
         width: 90%;
     }
+    #menu{
+        display: none;
+    }
     .text-title{
         display: flex;
         flex-direction: column;

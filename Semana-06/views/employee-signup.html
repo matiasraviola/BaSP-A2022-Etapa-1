@@ -8,11 +8,11 @@
         <link rel="stylesheet" type="text/css" href="../styles/reset.css">
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <link rel="stylesheet" type="text/css" href="../styles/header.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
         <link rel="stylesheet" type="text/css" href="../styles/sidebar.css">
         <link rel="stylesheet" type="text/css" href="../styles/login.css">
         <link rel="stylesheet" type="text/css" href="../styles/employee-signup.css">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
         <script src="../javascript/employee-signup.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="https://kit.fontawesome.com/d7c9d962f7.js" crossorigin="anonymous"></script>
@@ -55,8 +55,8 @@
             <header>
                 <h1>Trackgenix</h1>
             </header>
-            <main>
-                <div class="flex-container">
+            <main >
+                <form id="form-signup">
                     <fieldset>
                         <label>Name</label>
                         <input id="name" type="text" name="name" placeholder="Insert your name">
@@ -78,11 +78,9 @@
                         <input id="telephone" type="text" name="telephone" placeholder="Insert your telephone">
                     </fieldset>
                     <fieldset>
-                    <label>Address</label>
-                    <input id="address" type="text" name="address" placeholder="Insert your addres">
+                        <label>Address</label>
+                        <input id="address" type="text" name="address" placeholder="Insert your addres">
                     </fieldset>
-                </div>
-                <div class="flex-container">
                     <fieldset>
                         <label>Location</label>
                         <input id="location" type="text" name="location" placeholder="Insert yourlocation">
@@ -103,7 +101,7 @@
                         <label>Repeat Password</label>
                         <input id="pw2" type="text" name="password" placeholder="Repeat your password">
                     </fieldset>
-                </div>
+                </form>
                 <input id="btn-create" type="submit" name="submit" value="Create">
             </main>
             <footer>
