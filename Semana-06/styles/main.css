@@ -68,7 +68,7 @@ svg:hover path,svg:hover line,svg:hover circle,svg:hover rect{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 body > div.flex-container{
     margin-left: 0px;
