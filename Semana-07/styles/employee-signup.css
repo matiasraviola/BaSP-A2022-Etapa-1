@@ -1,0 +1,47 @@
+form#form-signup{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+fieldset{
+    color: #373867;
+    width: 100%;
+}
+fieldset p{
+    color:#F33413 ;
+}
+label{
+    display: block;
+}
+input{
+    width: 100%;
+    box-sizing: border-box;
+}
+#btn-create{
+    height: 40px;
+    width: 50%;
+    margin-top: 10px;
+    background-color:rgb(170,206,155) ;
+    border-radius: 5px;
+}
+.green-border{
+    border: 3px solid rgba(73, 163, 123, 1);
+}
+.red-border{
+    border: 3px solid #F33413;
+}
+aside a{
+    padding-left: -10px;
+}
+@media(min-width:480px){
+    fieldset{
+        width: 45%;
+    }
+}
+@media(min-width:1024px){
+    fieldset{
+        width: 45%;
+    }
+}

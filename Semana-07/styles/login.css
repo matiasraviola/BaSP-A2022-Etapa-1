@@ -1,0 +1,94 @@
+header{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: rgb(170,206,155);
+    background-image: none;
+}
+h1{
+    text-align: center;
+    width: 90%;
+    padding-bottom: 10px;
+    border-bottom: 0px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #373867;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    padding:  20px;
+    box-sizing: border-box;
+}
+main h2{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    border-bottom: 0px;
+    text-align: center;
+    font-size:40px;
+    color:rgba(0, 0, 0, 1);
+}
+label{
+    padding: 5px 0px;
+}
+p{
+    font-size:10px ;
+    padding: 10px 0px;
+}
+.label-input{
+    display: flex;
+    flex-direction: column;
+    width:90% ;
+}
+h3{
+    font-size: 10px;
+    font-weight:bold;
+}
+#pass-forgot{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+#button-login{
+    height: auto;
+    width: 50%;
+    margin-top: 10px;
+    background-color:rgb(170,206,155) ;
+    border-radius: 5px;
+}
+.green-border{
+    border: 3px solid rgba(73, 163, 123, 1);
+}
+.red-border{
+    border: 3px solid #F33413;
+}
+.label-input p{
+    color:#F33413 ;
+}
+#show-password{
+    font-size: 10px;
+    font-weight:lighter;
+}
+aside a{
+    padding-left: -50px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+}
+
+nav a{
+    display: flex;
+    align-items:center ;
+}
+nav a i{
+    padding-right: 10px;
+}

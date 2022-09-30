@@ -1,0 +1,306 @@
+main {
+    width: 100%;
+}
+main h2{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    border-bottom: 10px rgba(217, 217, 217, 1) solid;
+    text-align: center;
+    font-size:40px;
+    color:rgba(0, 0, 0, 1);
+}
+.main-text-container{
+    margin: 10px 0px;
+}
+.main-text-container p{
+    line-height: 30px;
+    text-align: center;
+    font-size:18px;
+}
+#green-text{
+    margin-bottom: 100px;
+    color: rgba(73, 163, 123, 1);
+}
+.paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: rgba(0, 0, 0, 1);
+    justify-content: center;
+}
+.paragraph h3{
+    width: 100%;
+    margin-top: 30px ;
+    border-bottom: 4px rgba(40, 98, 118, 1) solid;
+    font-size:40px;
+}
+.paragraph p{
+    font:normal 30px;
+    justify-content: center;
+}
+.paragraph img{
+   /* max-width: 40%;
+   height: auto; */
+   display: flex;
+    flex: 1 1 0;
+    height: auto;
+    max-width: 40%;
+}
+#functionalities-area{
+    margin: 10px 20px;
+}
+svg:hover path,svg:hover line,svg:hover circle,svg:hover rect{
+    stroke: #F13312;
+}
+#functionalities-area h3{
+    font-size: 30px ;
+}
+#functionalities-area p{
+    font-size: 20px ;
+    text-align: left;
+}
+.hourslog-text {
+    display: flex;
+    margin-bottom: 20px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* margin-left: 20px; */
+}
+body > div.flex-container{
+    margin-left: 0px;
+}
+.resourcemanag-text{
+    display: flex;
+    margin-bottom: 20px;
+}
+.reports-text{
+    display: flex;
+    margin-bottom: 20px;
+}
+.multiplerole-text{
+   display: flex;
+   margin-bottom: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+}
+#contact-area{
+    margin: 10px 20px;
+}
+#ca-name-select{
+    width: 100%;
+    margin-left: 30px;
+}
+.contact-area-name{
+    width: 90%;
+    margin-bottom: 25px;
+}
+.contact-area-name label{
+    color: rgba(55, 56, 103, 1);
+}
+.contact-area-name input{
+    width: 100%;
+    height:37px;
+}
+.contact-area-ca{
+    width: 100%;
+    height: 16px;
+    color: rgba(55, 56, 103, 1);
+    margin-bottom: 50px;
+}
+.contact-area-ca select{
+    width:100%;
+    height:37px;
+    color: rgba(55, 56, 103, 1);
+}
+.contact-area-email{
+    width:90%;
+    color: rgba(55, 56, 103, 1);
+    margin-bottom: 25px;
+}
+.contact-area-email input{
+    width:100%;
+    height:37px;
+    margin-top: 10px;
+}
+.contact-area-message{
+    width:90%;
+    margin-top: 44px;
+    color: rgba(55, 56, 103, 1);
+}
+.contact-area-message label{
+    display: block;
+}
+.contact-area-message textarea {
+    width:100%;
+    height:179.57px;
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 15px;
+}
+.button-submit {
+    width:177px;
+    height:48px;
+    background-color: #AACE9B;
+}
+.button-submit:hover {
+    background-color:	rgb(0, 255, 0);
+}
+.button-reset {
+    width:117px;
+    height:48px;
+    background-color: rgba(241, 51, 18, 1);
+}
+.button-reset:hover{
+    background-color: rgb(255, 112, 40);
+}
+#categories-area {
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    align-items: center;
+    height: 247px;
+    background-image: url(../assets/img.png/list-picture.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    color:rgba(55, 56, 103, 1);
+}
+#categories-area ol{
+    font-size: 8px;
+}
+
+@media (min-width:481px){
+    .text-title{
+        display: flex;
+        flex-direction: column;
+    }
+    .paragraph{
+        flex-wrap: nowrap;
+    }
+    .paragraph:nth-last-of-type(1){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(3){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(1) h3{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(3) h3{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #functionalities-flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #functionalities-flex-container svg{
+        width: 50%;
+        height:50%;
+    }
+    .hourslog-text, .reports-text, .resourcemanag-text, .multiplerole-text{
+        width: 50%;
+        margin-top: 20px;
+    }
+    #categories-area{
+        display: flex;
+    }
+    #ca-name-select{
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .contact-area-name{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .contact-area-ca{
+        margin-top: -15px;
+    }
+    .contact-area-ca label{
+        margin-left: 20px;
+    }
+    .contact-area-ca select{
+        width:100%;
+        height:37px;
+        margin-left: 20px;
+        color: rgba(55, 56, 103, 1);
+    }
+    .contact-area-email{
+        width:50%;
+        color: rgba(55, 56, 103, 1);
+        margin-bottom: 25px;
+        align-self: start;
+    }
+}
+@media(min-width:1024px){
+    body > div.flex-container{
+        margin-left: 10%;
+        width: 90%;
+    }
+    #menu{
+        display: none;
+    }
+    .text-title{
+        display: flex;
+        flex-direction: column;
+    }
+    .paragraph{
+        flex-wrap: nowrap;
+    }
+    .paragraph:nth-last-of-type(1){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph:nth-last-of-type(3){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .paragraph img{
+        height: 400px;
+    }
+    #categories-area{
+        display: flex;
+        width: 100%;
+    }
+    #ca-name-select{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: 0px;;
+    }
+    .contact-area-name{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .contact-area-ca select{
+        width:100%;
+        height:37px;
+        margin-left: 20px;
+        color: rgba(55, 56, 103, 1);
+    }
+    .contact-area-email{
+        align-self: start;
+        width:50%;
+        margin-bottom: 25px;
+        color: rgba(55, 56, 103, 1);
+
+    }
+}
