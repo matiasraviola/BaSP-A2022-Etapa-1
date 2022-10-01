@@ -60,7 +60,7 @@ window.onload = function(){
     //alert9 and arrayInput[9] --> pw
     //alert10, alert 11 and arrayInput[10] --> repeat pw
 
-    //NAME
+    // FUNCTIONS VALIDATIONS
     function validationNames (input){
         for (i=0; i < input.length; i++){
             if (input.charAt(i).toUpperCase() == input.charAt(i).toLowerCase()){
@@ -69,6 +69,60 @@ window.onload = function(){
         }
         return true
     }
+    function letNumSpaceValidation(stringLetter){
+        lett = 0;
+        num = 0;
+        for (i=0; i < stringLetter.length; i++){
+            if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                lett++
+            }else if (numberValidation (stringLetter.charAt(i))){
+                num++;
+            } else if (stringLetter.charAt(i) != ' '){
+                return false;
+            }
+        }
+        return true;
+        }
+    function letNumValidation(stringLetter){
+        lett = 0;
+        num = 0;
+        for (i=0; i < stringLetter.length; i++){
+            if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                lett++
+            }else if (numberValidation (stringLetter.charAt(i))){
+                    num++;
+            } else{
+                    return false;
+            }
+        }
+        return true;
+        }
+    function letterNumberValidation(stringLetter){
+        upper = 0;
+        lower = 0;
+        num = 0;
+        for (i=0; i < stringLetter.length; i++){
+            if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
+                    upper++;
+                }else{
+                    lower++;
+                }
+            }else if (numberValidation (stringLetter.charAt(i))){
+                    num++;
+                } else{
+                    return false;
+            }
+        }
+        return true;
+        }
+    function numberValidation (stringNumber){
+        var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+            if(numbers.includes(stringNumber)){
+            }else{
+            }
+    }
+        //NAME
     name.onblur = function(){
         if(name.value.length < 3){
             name.classList.add("red-border");
@@ -188,92 +242,64 @@ window.onload = function(){
                 tel.parentNode.removeChild(alert4);
             }
         }
-        // ADDRESS
-        function letNumSpaceValidation(stringLetter){
-            lett = 0;
-            num = 0;
-            for (i=0; i < stringLetter.length; i++){
-                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                    lett++
-                }else if (numberValidation (stringLetter.charAt(i))){
-                    num++;
-                } else if (stringLetter.charAt(i) != ' '){
-                    return false;
-                }
-            }
-            return true;
-            }
-        address.onblur = function(){
-            if (address.value.length < 5){
-                address.classList.add("red-border");
-                address.parentNode.insertBefore(alert5, address.nextElementSibling);
-                arrayInput[5] = 'Address: Need more';
-                return false
-            }else if(letNumSpaceValidation (address.value) == false){
-                address.classList.add("red-border");
-                address.parentNode.insertBefore(alert5, address.nextElementSibling);
-                arrayInput[5] = 'Address: Need number and letters';
-                return false
-            }else if(lett == 0 || num==0){
-                address.classList.add("red-border");
-                address.parentNode.insertBefore(alert5, address.nextElementSibling);
-                arrayInput[5] = 'Address: Need more';
-                return false
-            }else if(address.value.substring(0,1) == ' ' || address.value.substring(address.value.length - 1) == ' '){
-                address.classList.add("red-border");
-                address.parentNode.insertBefore(alert5, address.nextElementSibling);
-                arrayInput[5] = "Address: You can't star/finish with a withe spaces";
-                return false
-            }else{
-                address.classList.add("green-border");
-                arrayInput[5] = 'Address: Successful';
-
-                return true
-            }
-            }
-        address.onfocus = function (){
-            address.classList.remove("green-border");
-            address.classList.remove("red-border");
-            if (address.parentNode.contains(alert5)){
-                address.parentNode.removeChild(alert5);
-            }
-        }
-        //LOCATION}
-        function letNumValidation(stringLetter){
-            lett = 0;
-            num = 0;
-            for (i=0; i < stringLetter.length; i++){
-                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                    lett++
-                }else if (numberValidation (stringLetter.charAt(i))){
-                        num++;
-                } else{
-                        return false;
-                }
-            }
-            return true;
-            }
-        location.onblur = function (){
-        if (location.value.length < 3){
-            location.classList.add("red-border");
-            location.parentNode.insertBefore(alert6, location.nextElementSibling);
-            arrayInput[6] = 'Location: need more characters';
+    // ADDRESS
+    address.onblur = function(){
+        if (address.value.length < 5){
+            address.classList.add("red-border");
+            address.parentNode.insertBefore(alert5, address.nextElementSibling);
+            arrayInput[5] = 'Address: Need more';
             return false
-        }else if(letNumValidation(location.value) == false){
-            location.classList.add("red-border");
-            location.parentNode.insertBefore(alert6, location.nextElementSibling);
-            arrayInput[6] = 'Location: Invalid Location';
+        }else if(letNumSpaceValidation (address.value) == false){
+            address.classList.add("red-border");
+            address.parentNode.insertBefore(alert5, address.nextElementSibling);
+            arrayInput[5] = 'Address: Need number and letters';
             return false
-        }else if (lett < 4 || num == 0){
-            location.classList.add("red-border");
-            location.parentNode.insertBefore(alert6, location.nextElementSibling);
-            arrayInput[6] = 'Location: Invalid Location';
+        }else if(lett == 0 || num==0){
+            address.classList.add("red-border");
+            address.parentNode.insertBefore(alert5, address.nextElementSibling);
+            arrayInput[5] = 'Address: Need more';
+            return false
+        }else if(address.value.substring(0,1) == ' ' || address.value.substring(address.value.length - 1) == ' '){
+            address.classList.add("red-border");
+            address.parentNode.insertBefore(alert5, address.nextElementSibling);
+            arrayInput[5] = "Address: You can't star/finish with a withe spaces";
             return false
         }else{
-            location.classList.add("green-border");
-            arrayInput[6] = 'Location: Successful';
+            address.classList.add("green-border");
+            arrayInput[5] = 'Address: Successful';
+
             return true
         }
+        }
+    address.onfocus = function (){
+        address.classList.remove("green-border");
+        address.classList.remove("red-border");
+        if (address.parentNode.contains(alert5)){
+            address.parentNode.removeChild(alert5);
+        }
+    }
+    //LOCATION
+    location.onblur = function (){
+    if (location.value.length < 3){
+        location.classList.add("red-border");
+        location.parentNode.insertBefore(alert6, location.nextElementSibling);
+        arrayInput[6] = 'Location: need more characters';
+        return false
+    }else if(letNumValidation(location.value) == false){
+        location.classList.add("red-border");
+        location.parentNode.insertBefore(alert6, location.nextElementSibling);
+        arrayInput[6] = 'Location: Invalid Location';
+        return false
+    }else if (lett < 4 || num == 0){
+        location.classList.add("red-border");
+        location.parentNode.insertBefore(alert6, location.nextElementSibling);
+        arrayInput[6] = 'Location: Invalid Location';
+        return false
+    }else{
+        location.classList.add("green-border");
+        arrayInput[6] = 'Location: Successful';
+        return true
+    }
     }
     location.onfocus = function (){
         location.classList.remove("green-border");
@@ -335,26 +361,7 @@ window.onload = function(){
             email.parentNode.removeChild(alert8);
         }
     }
-        //PASSWORD 1
-        function letterNumberValidation(stringLetter){
-            upper = 0;
-            lower = 0;
-            num = 0;
-            for (i=0; i < stringLetter.length; i++){
-                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                    if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
-                        upper++;
-                    }else{
-                        lower++;
-                    }
-                }else if (numberValidation (stringLetter.charAt(i))){
-                        num++;
-                    } else{
-                        return false;
-                }
-            }
-            return true;
-            }
+     //PASSWORD 1
     pw1.onblur = function (){
         var upper = 0;
         var lower = 0;
@@ -371,7 +378,7 @@ window.onload = function(){
             arrayInput[9] = 'Passwrod: Invalid password';
             return false;
         }
-        else if (num==0 || upper==0 || lower==0){
+        else if (num==0 && upper==0 && lower==0){
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Password: Invalid password';
@@ -385,15 +392,6 @@ window.onload = function(){
             return true;
         }
         }
-        function numberValidation (stringNumber){
-            var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-                if(numbers.includes(stringNumber)){
-                    return true
-                }else{
-                    return false
-                }
-        }
-
     pw1.onfocus = function (){
         pw1.classList.remove("green-border");
         pw1.classList.remove("red-border");
@@ -446,12 +444,11 @@ window.onload = function(){
         var resultEmail= email.onblur(email.value);
         var resultPass1 = pw1.onblur (pw1.value);
         var resultPass2 = pw2.onblur (pw2.value);
-        if (resultName || resultlName  || resultId|| resultDob || resultTel ||
-            resultAddress || resultLoc || resultZip || resultPass2 ||resultPass1
-            || resultEmail ){
-            alert('Welcome to Trackgenix :\n' + arrayInput[0]+"\n" + arrayInput[1]+"\n"+ arrayInput[2]+"\n"+ arrayInput[3]+"\n"
-            + arrayInput[4]+"\n"+ arrayInput[5]+"\n"+ arrayInput[6]+"\n"+ arrayInput[7]+"\n"+ arrayInput[8]+"\n"+ arrayInput[9]+"\n"
-            + arrayInput[10]);
+        if (resultName && resultlName  && resultId && resultDob && resultTel &&resultAddress && resultLoc && resultZip
+            && resultPass2 && resultPass1 && resultEmail ){
+            alert('Welcome to Trackgenix :\n' + name.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+"\n"+ id.value +' '+ arrayInput[2]+"\n"+ dob.value +' '+ arrayInput[3]+"\n"
+            + tel.value +' '+ arrayInput[4]+"\n"+ address.value +' '+ arrayInput[5]+"\n"+ location.value +' '+ arrayInput[6]+"\n"+ zip.value +' '+ arrayInput[7]+"\n"+ email.value +' '+ arrayInput[8]+"\n"+ pw1.value +' '+ arrayInput[9]+"\n"
+            + pw2.value +' '+ arrayInput[10]);
         }else{
             alert('Something goes wrong: ' + arrayInput[0]+"\n" + arrayInput[1]+"\n"+ arrayInput[2]+"\n"+ arrayInput[3]+"\n"
             + arrayInput[4]+"\n"+ arrayInput[5]+"\n"+ arrayInput[6]+"\n"+ arrayInput[7]+"\n"+ arrayInput[8]+"\n"+ arrayInput[9]+"\n"

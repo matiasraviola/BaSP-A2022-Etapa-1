@@ -9,6 +9,50 @@ window.onload = function(){
     var showPass = document.getElementById('show-password');
     var button = document.getElementById('button-login');
     var arrayInput = [];
+    // FUNCTIONS VALIDATIONS
+    function letterNumberValidation(stringLetter){
+        var upper = 0;
+        var lower = 0;
+        var num  = 0;
+        for (i=0; i < stringLetter.length; i++){
+            if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
+                    upper++;
+                }else{
+                    lower++;
+                }
+            }else if (numberValidation (stringLetter.charAt(i)) == true){
+                    num++;
+                } else{
+                    return false;
+            }
+        }
+        return true;
+        }
+        function numberValidation (stringNumber){
+            var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+                if(numbers.includes(stringNumber)){
+                }else{
+                }
+        }
+    //REQUEST
+    function request (email, password){
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email='+email+'&password='+password)
+            .then(function (response){
+                return response.json();
+            })
+            .then(function (data){
+                if (data.success){
+                    alert('Succeful: '+ data.msg);
+                }else{
+                    alert('Error: ' + data.msg)
+                }
+            console.log(data);
+            })
+            .catch(function (error){
+                console.log(error);
+            })
+        }
      // VALIDACION DEL EMAIL
      email.onblur = function (){
         if (!emailExpression.test(email.value)){
@@ -39,9 +83,6 @@ window.onload = function(){
     }
     // Validation PW
     password.onblur = function (){
-        var upper = 0;
-        var lower = 0;
-        var num  = 0;
         if (password.value.length < 8){
             password.classList.add("red-border");
             password.parentNode.insertBefore(alert1, password.nextElementSibling);
@@ -67,31 +108,6 @@ window.onload = function(){
             arrayInput[1] = 'Password: Password Succeful\n';
             return true;
         }
-        // FUNCTIONS VALIDATIONS
-        function letterNumberValidation(stringLetter){
-            for (i=0; i < stringLetter.length; i++){
-                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                    if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
-                        upper++;
-                    }else{
-                        lower++;
-                    }
-                }else if (numberValidation (stringLetter.charAt(i)) == true){
-                        num++;
-                    } else{
-                        return false;
-                }
-            }
-            return true;
-            }
-            function numberValidation (stringNumber){
-                var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-                    if(numbers.includes(stringNumber)){
-                        return true
-                    }else{
-                        return false
-                    }
-            }
         }
 
     password.onfocus = function (){
@@ -109,27 +125,10 @@ window.onload = function(){
         var resultPass = password.onblur (password.value);
         var resultEmail= email.onblur(email.value);
         if (resultPass  && resultEmail){
-            alert('Welcome to Trackgenix :\n' +arrayInput[0] + arrayInput[1]);
+            alert('Welcome to Trackgenix :\n' + email.value +' '+arrayInput[0]+'\n'+ password.value +' '+ arrayInput[1]);
             request(email.value, password.value);
         }else{
-            alert('Something goes wrong: '+ arrayInput[0] + arrayInput[1]);
+            alert('Something goes wrong: '+ email.value +' '+ arrayInput[0] +'\n'+ password.value +' '+  arrayInput[1]);
         }
     }
-    function request (email, password){
-        fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email='+email+'&password='+password)
-            .then(function (response){
-                return response.json();
-            })
-            .then(function (data){
-                if (data.success){
-                    alert('Succeful: '+ data.msg);
-                }else{
-                    alert('Error: ' + data.msg)
-                }
-            console.log(data);
-            })
-            .catch(function (error){
-                console.log(error);
-            })
-        }
 }
