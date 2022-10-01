@@ -108,6 +108,7 @@ window.onload = function(){
         var resultEmail= email.onblur(email.value);
         if (resultPass == true || resultEmail == true){
             alert('Welcome to Trackgenix ');
+            
         }else{
             alert('Something goes wrong: '+ arrayInput[0]+' '+ arrayInput[1]);
         }

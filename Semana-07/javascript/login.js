@@ -10,7 +10,7 @@ window.onload = function(){
     var button = document.getElementById('button-login');
     var arrayInput = [];
      // VALIDACION DEL EMAIL
-    email.onblur = function (){
+     email.onblur = function (){
         if (!emailExpression.test(email.value)){
             email.classList.add("red-border");
             email.parentNode.insertBefore(alert2, email.nextElementSibling);
@@ -26,6 +26,7 @@ window.onload = function(){
             if (email.parentNode.contains(alert2)){
                 email.parentNode.removeChild(alert2);
             }
+            arrayInput[0] = 'Email: Email Succeful\n';
             return true;
         }
         }
@@ -63,6 +64,7 @@ window.onload = function(){
             if (password.parentNode.contains(alert1)){
                 password.parentNode.removeChild(alert1);
             }
+            arrayInput[1] = 'Password: Password Succeful\n';
             return true;
         }
         // FUNCTIONS VALIDATIONS
@@ -106,10 +108,28 @@ window.onload = function(){
     button.onclick = function(){
         var resultPass = password.onblur (password.value);
         var resultEmail= email.onblur(email.value);
-        if (resultPass == true || resultEmail == true){
-            alert('Welcome to Trackgenix ');
+        if (resultPass  && resultEmail){
+            alert('Welcome to Trackgenix :\n' +arrayInput[0] + arrayInput[1]);
+            request(email.value, password.value);
         }else{
-            alert('Something goes wrong: '+ arrayInput[0]+' '+ arrayInput[1]);
+            alert('Something goes wrong: '+ arrayInput[0] + arrayInput[1]);
         }
     }
+    function request (email, password){
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email='+email+'&password='+password)
+            .then(function (response){
+                return response.json();
+            })
+            .then(function (data){
+                if (data.success){
+                    alert('Succeful: '+ data.msg);
+                }else{
+                    alert('Error: ' + data.msg)
+                }
+            console.log(data);
+            })
+            .catch(function (error){
+                console.log(error);
+            })
+        }
 }

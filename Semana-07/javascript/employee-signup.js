@@ -60,7 +60,15 @@ window.onload = function(){
     //alert9 and arrayInput[9] --> pw
     //alert10, alert 11 and arrayInput[10] --> repeat pw
 
-
+    //NAME
+    function validationNames (input){
+        for (i=0; i < input.length; i++){
+            if (input.charAt(i).toUpperCase() == input.charAt(i).toLowerCase()){
+                return false
+            }
+        }
+        return true
+    }
     name.onblur = function(){
         if(name.value.length < 3){
             name.classList.add("red-border");
@@ -85,15 +93,7 @@ window.onload = function(){
             name.parentNode.removeChild(alert0);
         }
     }
-    function validationNames (input){
-        for (i=0; i < input.length; i++){
-            if (input.charAt(i).toUpperCase() == input.charAt(i).toLowerCase()){
-                return false
-            }
-        }
-        return true
-    }
-
+    //LAST NAME
     lName.onblur = function(){
         if(lName.value.length < 3){
             lName.classList.add("red-border");
@@ -118,7 +118,7 @@ window.onload = function(){
             lName.parentNode.removeChild(alert1);
         }
     }
-
+    //ID
     id.onblur = function (){
         if (id.value.length < 8){
             id.classList.add("red-border");
@@ -143,7 +143,7 @@ window.onload = function(){
             id.parentNode.removeChild(alert2);
         }
     }
-
+    // DATE OF BIRTH
     dob.onblur = function (){
         if (dob.value == ''){
             dob.classList.add("red-border");
@@ -163,7 +163,7 @@ window.onload = function(){
             dob.parentNode.removeChild(alert3);
         }
     }
-
+    // TELEPHONE
     tel.onblur = function(){
             if (tel.value.length != 10){
                 tel.classList.add("red-border");
@@ -188,10 +188,22 @@ window.onload = function(){
                 tel.parentNode.removeChild(alert4);
             }
         }
-
+        // ADDRESS
+        function letNumSpaceValidation(stringLetter){
+            lett = 0;
+            num = 0;
+            for (i=0; i < stringLetter.length; i++){
+                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                    lett++
+                }else if (numberValidation (stringLetter.charAt(i))){
+                    num++;
+                } else if (stringLetter.charAt(i) != ' '){
+                    return false;
+                }
+            }
+            return true;
+            }
         address.onblur = function(){
-            lett=0;
-            num=0;
             if (address.value.length < 5){
                 address.classList.add("red-border");
                 address.parentNode.insertBefore(alert5, address.nextElementSibling);
@@ -218,18 +230,6 @@ window.onload = function(){
 
                 return true
             }
-            function letNumSpaceValidation(stringLetter){
-                for (i=0; i < stringLetter.length; i++){
-                    if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                        lett++
-                    }else if (numberValidation (stringLetter.charAt(i)) == true){
-                        num++;
-                    } else if (stringLetter.charAt(i) != ' '){
-                        return false;
-                    }
-                }
-                return true;
-                }
             }
         address.onfocus = function (){
             address.classList.remove("green-border");
@@ -238,10 +238,22 @@ window.onload = function(){
                 address.parentNode.removeChild(alert5);
             }
         }
-
+        //LOCATION}
+        function letNumValidation(stringLetter){
+            lett = 0;
+            num = 0;
+            for (i=0; i < stringLetter.length; i++){
+                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                    lett++
+                }else if (numberValidation (stringLetter.charAt(i))){
+                        num++;
+                } else{
+                        return false;
+                }
+            }
+            return true;
+            }
         location.onblur = function (){
-        lett = 0;
-        num = 0;
         if (location.value.length < 3){
             location.classList.add("red-border");
             location.parentNode.insertBefore(alert6, location.nextElementSibling);
@@ -262,18 +274,6 @@ window.onload = function(){
             arrayInput[6] = 'Location: Successful';
             return true
         }
-        function letNumValidation(stringLetter){
-            for (i=0; i < stringLetter.length; i++){
-                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                    lett++
-                }else if (numberValidation (stringLetter.charAt(i)) == true){
-                        num++;
-                } else{
-                        return false;
-                }
-            }
-            return true;
-            }
     }
     location.onfocus = function (){
         location.classList.remove("green-border");
@@ -282,7 +282,7 @@ window.onload = function(){
             location.parentNode.removeChild(alert6);
         }
     }
-
+    // ZIP CODE
     zip.onblur = function (){
         if (zip.value.length < 4 || zip.value.length > 5){
             zip.classList.add("red-border");
@@ -307,7 +307,7 @@ window.onload = function(){
             zip.parentNode.removeChild(alert7);
         }
     }
-
+    //EMAIL
     email.onblur = function (){
         if (!emailExpression.test(email.value)){
             email.classList.add("red-border");
@@ -335,6 +335,26 @@ window.onload = function(){
             email.parentNode.removeChild(alert8);
         }
     }
+        //PASSWORD 1
+        function letterNumberValidation(stringLetter){
+            upper = 0;
+            lower = 0;
+            num = 0;
+            for (i=0; i < stringLetter.length; i++){
+                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
+                    if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
+                        upper++;
+                    }else{
+                        lower++;
+                    }
+                }else if (numberValidation (stringLetter.charAt(i))){
+                        num++;
+                    } else{
+                        return false;
+                }
+            }
+            return true;
+            }
     pw1.onblur = function (){
         var upper = 0;
         var lower = 0;
@@ -364,23 +384,6 @@ window.onload = function(){
             }
             return true;
         }
-
-        function letterNumberValidation(stringLetter){
-            for (i=0; i < stringLetter.length; i++){
-                if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                    if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
-                        upper++;
-                    }else{
-                        lower++;
-                    }
-                }else if (numberValidation (stringLetter.charAt(i)) == true){
-                        num++;
-                    } else{
-                        return false;
-                }
-            }
-            return true;
-            }
         }
         function numberValidation (stringNumber){
             var numbers = ['0','1','2','3','4','5','6','7','8','9'];
@@ -398,6 +401,7 @@ window.onload = function(){
             pw1.parentNode.removeChild(alert9);
         }
     }
+    //PASSSWORD 2
     pw2.onblur = function (){
         if (pw1.value != pw2.value){
             pw2.classList.add("red-border");
@@ -429,6 +433,7 @@ window.onload = function(){
             pw2.parentNode.removeChild(alert11);
         }
     }
+    //BUTTON
     button.onclick = function(){
         var resultName = name.onblur(name.value);
         var resultlName = lName.onblur(lName.value);
@@ -441,9 +446,9 @@ window.onload = function(){
         var resultEmail= email.onblur(email.value);
         var resultPass1 = pw1.onblur (pw1.value);
         var resultPass2 = pw2.onblur (pw2.value);
-        if (resultName == true || resultlName == true || resultId == true || resultDob == true || resultTel == true ||
-            resultAddress == true || resultLoc ==true || resultZip == true || resultPass2 == true ||resultPass1 == true
-            || resultEmail == true ){
+        if (resultName || resultlName  || resultId|| resultDob || resultTel ||
+            resultAddress || resultLoc || resultZip || resultPass2 ||resultPass1
+            || resultEmail ){
             alert('Welcome to Trackgenix :\n' + arrayInput[0]+"\n" + arrayInput[1]+"\n"+ arrayInput[2]+"\n"+ arrayInput[3]+"\n"
             + arrayInput[4]+"\n"+ arrayInput[5]+"\n"+ arrayInput[6]+"\n"+ arrayInput[7]+"\n"+ arrayInput[8]+"\n"+ arrayInput[9]+"\n"
             + arrayInput[10]);

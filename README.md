@@ -36,8 +36,12 @@ This week we start with some exercises in JavaScrit and html, css and flexbox co
 https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
 ## Week 06
-This week we made the Sign up and Login pages using html, css and javascript.
+This week we made the Sign up and Login pages using html, css and JavaScript.
 https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
+
+## Week 07
+In this week we made the requests HTTP for the login and sign up pages, using the method "Fetch" in JavaScript.
+https://matiasraviola.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html
 
 Copyright © 2022 Radium Rocket. All right reserved
 
