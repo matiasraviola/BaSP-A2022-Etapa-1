@@ -43,9 +43,9 @@ window.onload = function(){
             })
             .then(function (data){
                 if (data.success){
-                    alert('Succeful: '+ data.msg);
+                    alert('Succeful: '+ data.msg+'\n' + email.value +' :'+arrayInput[0]+'\n'+ password.value +' :'+ arrayInput[1]);
                 }else{
-                    alert('Error: ' + data.msg)
+                    alert('Error: ' + data.msg+'\n'+ email.value +' :'+ arrayInput[0] +'\n'+ password.value +' :'+  arrayInput[1])
                 }
             console.log(data);
             })
