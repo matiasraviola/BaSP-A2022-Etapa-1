@@ -2,7 +2,7 @@ window.onload = function(){
     var button = document.getElementById('btn-create');
     var arrayInput = [];
 
-    var name = document.getElementById('name');
+    var fName = document.getElementById('name');
     var alert0 = document.createElement('p');
     alert0.innerHTML = 'Invalid Name';
 
@@ -28,7 +28,7 @@ window.onload = function(){
 
     var location = document.getElementById('location');
     var alert6 = document.createElement ('p');
-    alert6.innerHTML = 'Invaliz Location';
+    alert6.innerHTML = 'Invalid Location';
 
     var zip = document.getElementById('zip');
     var alert7 = document.createElement('p');
@@ -48,6 +48,10 @@ window.onload = function(){
     alert10.innerHTML = "Passwords don't match";
     var alert11 = document.createElement('p');
     alert11.innerHTML = "No spaces alowed";
+    var lettCount= 0;
+    var numCount = 0;
+    var upper = 0;
+    var lower = 0;
     //alert0 and arrayInput[0] --> name
     //alert1 and arrayInput[1] --> last name
     //alert2 and arrayInput[2] --> id
@@ -70,27 +74,27 @@ window.onload = function(){
         return true
     }
     function letNumSpaceValidation(stringLetter){
-        lett = 0;
-        num = 0;
+        lettCount = 0;
+        numCount = 0;
         for (i=0; i < stringLetter.length; i++){
             if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                lett++
+                lettCount++
             }else if (numberValidation (stringLetter.charAt(i))){
-                num++;
+                numCount++;
             } else if (stringLetter.charAt(i) != ' '){
                 return false;
             }
         }
         return true;
         }
-    function letNumValidation(stringLetter){
-        lett = 0;
-        num = 0;
+    function letNumValidation (stringLetter){
+        lettCount= 0;
+        numCount = 0;
         for (i=0; i < stringLetter.length; i++){
             if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
-                lett++
+                lettCount++
             }else if (numberValidation (stringLetter.charAt(i))){
-                    num++;
+                    numCount++;
             } else{
                     return false;
             }
@@ -100,7 +104,7 @@ window.onload = function(){
     function letterNumberValidation(stringLetter){
         upper = 0;
         lower = 0;
-        num = 0;
+        numCount = 0;
         for (i=0; i < stringLetter.length; i++){
             if (stringLetter.charAt(i).toUpperCase() != stringLetter.charAt(i).toLowerCase()){
                 if (stringLetter.charAt(i) == stringLetter.charAt(i).toUpperCase()){
@@ -109,8 +113,8 @@ window.onload = function(){
                     lower++;
                 }
             }else if (numberValidation (stringLetter.charAt(i))){
-                    num++;
-                } else{
+                    numCount++;
+            } else{
                     return false;
             }
         }
@@ -118,33 +122,55 @@ window.onload = function(){
         }
     function numberValidation (stringNumber){
         var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-            if(numbers.includes(stringNumber)){
-            }else{
-            }
+            return (numbers.includes(stringNumber));
     }
+    //REQUEST completar los atributos
+    function request (fName,lName,id,dob,tel,address,location,zip,email,pw1){
+        var parameters = 'name='+fName.value+'&lastName='+lName+'&dni='+id+'&dob='+dobCorrection(dob)+'&phone='+tel+'&address='+address+'&city='
+        +location+'&zip='+zip+'&email='+email+'&password='+pw1
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ parameters)
+            .then(function (response){
+                return response.json();
+            })
+            .then(function (data){
+                if (data.success){
+                    alert('Succeful: '+ data.msg+'\n'+ fName +' :'+arrayInput[0]+'\n'+ lName +' :'+ arrayInput[1]+'\n'+ id +' :'+ arrayInput[2]+'\n'+ dob +' :'+ arrayInput[3]+'\n'
+                    + tel +' :'+ arrayInput[4]+'\n'+ address +' :'+ arrayInput[5]+'\n'+ location +' :'+ arrayInput[6]+'\n'+ zip +' :'+ arrayInput[7]+'\n'+ email +' :'+ arrayInput[8]+'\n'+ pw1 +' :'+ arrayInput[9]+'\n'
+                    + pw2 +' :'+ arrayInput[10]);
+                }else{
+                    alert('Error: ' + data.msg+'\n'+ fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
+                    + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
+                    + pw2.value +' '+ arrayInput[10])
+                }
+            console.log(data);
+            })
+            .catch(function (error){
+                console.log(error);
+            })
+        }
         //NAME
-    name.onblur = function(){
-        if(name.value.length < 3){
-            name.classList.add("red-border");
-            name.parentNode.insertBefore(alert0, name.nextElementSibling);
+    fName.onblur = function(){
+        if(fName.value.length < 4){
+            fName.classList.add("red-border");
+            fName.parentNode.insertBefore(alert0, fName.nextElementSibling);
             arrayInput[0] = 'Name: Need more characters';
             return false
-        }else if (validationNames (name.value) != true) {
-            name.classList.add("red-border");
-            name.parentNode.insertBefore(alert0, name.nextElementSibling);
+        }else if (validationNames (fName.value) != true) {
+            fName.classList.add("red-border");
+            fName.parentNode.insertBefore(alert0, fName.nextElementSibling);
             arrayInput[0] = 'Name: Invalid Name';
             return false
         }else{
-            name.classList.add("green-border");
+            fName.classList.add("green-border");
             arrayInput[0] = 'Name: Successful';
             return true
         }
     }
-    name.onfocus = function (){
-        name.classList.remove("green-border");
-        name.classList.remove("red-border");
-        if (name.parentNode.contains(alert0)){
-            name.parentNode.removeChild(alert0);
+    fName.onfocus = function (){
+        fName.classList.remove("green-border");
+        fName.classList.remove("red-border");
+        if (fName.parentNode.contains(alert0)){
+            fName.parentNode.removeChild(alert0);
         }
     }
     //LAST NAME
@@ -254,7 +280,7 @@ window.onload = function(){
             address.parentNode.insertBefore(alert5, address.nextElementSibling);
             arrayInput[5] = 'Address: Need number and letters';
             return false
-        }else if(lett == 0 || num==0){
+        }else if    (lettCount== 0 || numCount ==0){
             address.classList.add("red-border");
             address.parentNode.insertBefore(alert5, address.nextElementSibling);
             arrayInput[5] = 'Address: Need more';
@@ -290,10 +316,10 @@ window.onload = function(){
         location.parentNode.insertBefore(alert6, location.nextElementSibling);
         arrayInput[6] = 'Location: Invalid Location';
         return false
-    }else if (lett < 4 || num == 0){
+    }else if    (lettCount< 4 || numCount == 0){
         location.classList.add("red-border");
         location.parentNode.insertBefore(alert6, location.nextElementSibling);
-        arrayInput[6] = 'Location: Invalid Location';
+        arrayInput[6] = 'Location: Invalid Location2';
         return false
     }else{
         location.classList.add("green-border");
@@ -363,22 +389,24 @@ window.onload = function(){
     }
      //PASSWORD 1
     pw1.onblur = function (){
-        var upper = 0;
-        var lower = 0;
-        var num  = 0;
         if (pw1.value.length < 8){
+            console.log('hola3')
+
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Password: Need more characters';
             return false;
 
         }else if (letterNumberValidation(pw1.value) == false ){
+            console.log('hola')
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Passwrod: Invalid password';
             return false;
         }
-        else if (num==0 && upper==0 && lower==0){
+        else if (numCount==0 || upper==0 || lower==0){
+            console.log(numCount+' ,'+upper+' ,'+lower)
+
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Password: Invalid password';
@@ -433,7 +461,7 @@ window.onload = function(){
     }
     //BUTTON
     button.onclick = function(){
-        var resultName = name.onblur(name.value);
+        var resultName = fName.onblur(fName.value);
         var resultlName = lName.onblur(lName.value);
         var resultId = id.onblur(id.value);
         var resultDob = dob.onblur(dob.value);
@@ -446,13 +474,20 @@ window.onload = function(){
         var resultPass2 = pw2.onblur (pw2.value);
         if (resultName && resultlName  && resultId && resultDob && resultTel &&resultAddress && resultLoc && resultZip
             && resultPass2 && resultPass1 && resultEmail ){
-            alert('Welcome to Trackgenix :\n' + name.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+"\n"+ id.value +' '+ arrayInput[2]+"\n"+ dob.value +' '+ arrayInput[3]+"\n"
-            + tel.value +' '+ arrayInput[4]+"\n"+ address.value +' '+ arrayInput[5]+"\n"+ location.value +' '+ arrayInput[6]+"\n"+ zip.value +' '+ arrayInput[7]+"\n"+ email.value +' '+ arrayInput[8]+"\n"+ pw1.value +' '+ arrayInput[9]+"\n"
+            alert('Welcome to Trackgenix :\n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
+            + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
             + pw2.value +' '+ arrayInput[10]);
+            request(fName.value,lName.value,id.value,dob.value,tel.value,address.value,location.value,zip.value,email.value, pw1.value,);
         }else{
-            alert('Something goes wrong: ' + arrayInput[0]+"\n" + arrayInput[1]+"\n"+ arrayInput[2]+"\n"+ arrayInput[3]+"\n"
-            + arrayInput[4]+"\n"+ arrayInput[5]+"\n"+ arrayInput[6]+"\n"+ arrayInput[7]+"\n"+ arrayInput[8]+"\n"+ arrayInput[9]+"\n"
+            alert('Something goes wrong: ' + arrayInput[0]+'\n' + arrayInput[1]+'\n'+ arrayInput[2]+'\n'+ arrayInput[3]+'\n'
+            + arrayInput[4]+'\n'+ arrayInput[5]+'\n'+ arrayInput[6]+'\n'+ arrayInput[7]+'\n'+ arrayInput[8]+'\n'+ arrayInput[9]+'\n'
             + arrayInput[10]);
         }
     }
 }
+
+    //date correction
+    var dobCorrection = function  (dob){
+        var arrayDob = dob.split('-');
+        return arrayDob[1]+'/'+arrayDob[2]+'/'+arrayDob[0];
+    }
