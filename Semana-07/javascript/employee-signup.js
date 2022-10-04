@@ -143,15 +143,17 @@ window.onload = function(){
             })
             .then(function (data){
                 if (data.success){
-                    alert('Succeful: '+ data.msg+'\n'+ fName +': '+arrayInput[0]+'\n'+ lName +': '+ arrayInput[1]+'\n'+ id +': '+ arrayInput[2]+'\n'+ dob +': '+ arrayInput[3]+'\n'
-                    + tel +': '+ arrayInput[4]+'\n'+ address +': '+ arrayInput[5]+'\n'+ location +': '+ arrayInput[6]+'\n'+ zip +': '+ arrayInput[7]+'\n'+ email +': '+ arrayInput[8]+'\n'+ pw1 +': '+ arrayInput[9]+'\n'
-                    + pw2 +': '+ arrayInput[10]);
+                    alertModalRes (true,data);
+                    // alert('Succeful: '+ data.msg+'\n'+ fName +': '+arrayInput[0]+'\n'+ lName +': '+ arrayInput[1]+'\n'+ id +': '+ arrayInput[2]+'\n'+ dob +': '+ arrayInput[3]+'\n'
+                    // + tel +': '+ arrayInput[4]+'\n'+ address +': '+ arrayInput[5]+'\n'+ location +': '+ arrayInput[6]+'\n'+ zip +': '+ arrayInput[7]+'\n'+ email +': '+ arrayInput[8]+'\n'+ pw1 +': '+ arrayInput[9]+'\n'
+                    // + pw2 +': '+ arrayInput[10]);
                     dataStorage(data);
                     console.log(data)
                 }else{
-                    alert('Error: ' + data.msg+'\n'+ fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
-                    + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
-                    + pw2.value +' '+ arrayInput[10])
+                    alertModalRes (false,data);
+                    // alert('Error: ' + data.msg+'\n'+ fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
+                    // + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
+                    // + pw2.value +' '+ arrayInput[10])
                 }
             console.log(data);
             })
@@ -159,7 +161,23 @@ window.onload = function(){
                 console.log(error);
             })
         }
-        //date correction
+    //request modal function
+    function alertModalRes (bool,data){
+        if (bool =! false){
+            var modalMsg = document.createElement('p');
+            modalMsg.innerHTML = 'Succeful: '+ data.msg + fName +': '+arrayInput[0]+ lName +': '+ arrayInput[1]+ id +': '+ arrayInput[2]+ dob +': '+ arrayInput[3]+'\n'
+            + tel +': '+ arrayInput[4]+ address +': '+ arrayInput[5]+ location +': '+ arrayInput[6]+ zip +': '+ arrayInput[7]+ email +': '+ arrayInput[8]+ pw1 +': '+ arrayInput[9]
+            + pw2 +': '+ arrayInput[10];
+            span.parentNode.insertBefore(modalMsg, span.nextElementSibling);
+        }else{
+            var modalMsg = document.createElement('p');
+            modalMsg.innerHTML = 'Error: ' + data.msg + fName.value +' '+arrayInput[0] + lName.value +' '+ arrayInput[1] + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
+            + tel.value +' '+ arrayInput[4] + address.value +' '+ arrayInput[5] + location.value +' '+ arrayInput[6] + zip.value +' '+ arrayInput[7] + email.value +' '+ arrayInput[8] + pw1.value +' '+ arrayInput[9] 
+            + pw2.value +' '+ arrayInput[10]
+            span.parentNode.insertBefore(modalMsg, span.nextElementSibling);
+        }
+   }
+    //date correction
     var dobCorrection = function(dob){
         var arrayDob = dob.split('-');
         return arrayDob[1]+'/'+arrayDob[2]+'/'+arrayDob[0];
@@ -515,18 +533,54 @@ window.onload = function(){
         var resultPass2 = pw2.onblur (pw2.value);
         if (resultName && resultlName  && resultId && resultDob && resultTel &&resultAddress && resultLoc && resultZip
             && resultPass2 && resultPass1 && resultEmail ){
-            alert('Welcome to Trackgenix: \n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
-            + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
-            + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
-            + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
-            + pw2.value +' '+ arrayInput[10]);
+            // alert('Welcome to Trackgenix: \n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
+            // + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
+            // + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
+            // + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
+            // + pw2.value +' '+ arrayInput[10]);
+            modal.style.display = "block";
+            alertModalVal();
             request(fName.value,lName.value,id.value,dob.value,tel.value,address.value,location.value,zip.value,
             email.value, pw1.value,pw2.value);
+
         }else{
-            alert('Something goes wrong: ' + arrayInput[0]+'\n' + arrayInput[1]+'\n'+ arrayInput[2]+'\n'+ arrayInput[3]+'\n'
-            + arrayInput[4]+'\n'+ arrayInput[5]+'\n'+ arrayInput[6]+'\n'+ arrayInput[7]+'\n'+ arrayInput[8]+'\n'+ arrayInput[9]+'\n'
-            + arrayInput[10]);
+            // alert('Something goes wrong: ' + arrayInput[0]+'\n' + arrayInput[1]+'\n'+ arrayInput[2]+'\n'+ arrayInput[3]+'\n'
+            // + arrayInput[4]+'\n'+ arrayInput[5]+'\n'+ arrayInput[6]+'\n'+ arrayInput[7]+'\n'+ arrayInput[8]+'\n'+ arrayInput[9]+'\n'
+            // + arrayInput[10]);
+            modal.style.display = "block";
+            alertModalVal();
         }
+    }
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    // var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+   function alertModalVal (){
+        var modalMsg = document.createElement('p');
+        modalMsg.innerHTML = 'Welcome to Trackgenix: \n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
+        + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
+        + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
+        + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
+        + pw2.value +' '+ arrayInput[10];
+        span.parentNode.insertBefore(modalMsg, span.nextElementSibling);
+   }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
     }
     localStorage.clear()
     if (localStorage.length != 0){
