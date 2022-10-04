@@ -124,9 +124,18 @@ window.onload = function(){
         var numbers = ['0','1','2','3','4','5','6','7','8','9'];
             return (numbers.includes(stringNumber));
     }
-    //REQUEST completar los atributos
+    function spaceValidation (stringLetter){
+        var spaceCount = 0;
+        for(i = 0; i <= address.value.length; i++){
+             if (stringLetter.charAt(i) == ' '){
+                 spaceCount++;
+             }
+         }
+         return spaceCount;
+     }
+    //REQUEST
     function request (fName,lName,id,dob,tel,address,location,zip,email,pw1){
-        var parameters = 'name='+fName.value+'&lastName='+lName+'&dni='+id+'&dob='+dobCorrection(dob)+'&phone='+tel+'&address='+address+'&city='
+        var parameters = 'name='+fName+'&lastName='+lName+'&dni='+id+'&dob='+dobCorrection(dob)+'&phone='+tel+'&address='+address+'&city='
         +location+'&zip='+zip+'&email='+email+'&password='+pw1
         fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ parameters)
             .then(function (response){
@@ -134,10 +143,11 @@ window.onload = function(){
             })
             .then(function (data){
                 if (data.success){
-                    alert('Succeful: '+ data.msg+'\n'+ fName +' :'+arrayInput[0]+'\n'+ lName +' :'+ arrayInput[1]+'\n'+ id +' :'+ arrayInput[2]+'\n'+ dob +' :'+ arrayInput[3]+'\n'
-                    + tel +' :'+ arrayInput[4]+'\n'+ address +' :'+ arrayInput[5]+'\n'+ location +' :'+ arrayInput[6]+'\n'+ zip +' :'+ arrayInput[7]+'\n'+ email +' :'+ arrayInput[8]+'\n'+ pw1 +' :'+ arrayInput[9]+'\n'
-                    + pw2 +' :'+ arrayInput[10]);
-                    dataStorage();
+                    alert('Succeful: '+ data.msg+'\n'+ fName +': '+arrayInput[0]+'\n'+ lName +': '+ arrayInput[1]+'\n'+ id +': '+ arrayInput[2]+'\n'+ dob +': '+ arrayInput[3]+'\n'
+                    + tel +': '+ arrayInput[4]+'\n'+ address +': '+ arrayInput[5]+'\n'+ location +': '+ arrayInput[6]+'\n'+ zip +': '+ arrayInput[7]+'\n'+ email +': '+ arrayInput[8]+'\n'+ pw1 +': '+ arrayInput[9]+'\n'
+                    + pw2 +': '+ arrayInput[10]);
+                    dataStorage(data);
+                    console.log(data)
                 }else{
                     alert('Error: ' + data.msg+'\n'+ fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
                     + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
@@ -150,28 +160,28 @@ window.onload = function(){
             })
         }
         //date correction
-    var dobCorrection = function  (dob){
+    var dobCorrection = function(dob){
         var arrayDob = dob.split('-');
         return arrayDob[1]+'/'+arrayDob[2]+'/'+arrayDob[0];
     }
     //Local Storage
-    function dataStorage (){
-        localStorage.setItem('name', fName.value);
-        localStorage.setItem('lastName', lName.value);
-        localStorage.setItem('dni', id.value);
-        localStorage.setItem('dob', dob.value);
-        localStorage.setItem('phone', tel.value);
-        localStorage.setItem('address', address.value);
-        localStorage.setItem('city', location.value);
-        localStorage.setItem('zip', zip.value);
-        localStorage.setItem('email', email.value);
-        localStorage.setItem('password', pw1.value);
+    function dataStorage (data){
+        localStorage.setItem('name', data.data.name);
+        localStorage.setItem('lastName', data.data.lastName);
+        localStorage.setItem('dni', data.data.dni);
+        localStorage.setItem('dob', data.data.dob);
+        localStorage.setItem('phone', data.data.phone);
+        localStorage.setItem('address', data.data.address);
+        localStorage.setItem('city', data.data.city);
+        localStorage.setItem('zip', data.data.zip);
+        localStorage.setItem('email', data.data.email);
+        localStorage.setItem('password', data.data.password);
     }
     function getStorage (){
         fName.value = localStorage.getItem('name');
         lName.value = localStorage.getItem('lastName');
         id.value = localStorage.getItem('dni');
-        dob.value = localStorage.getItem('dob');
+        dob.value = localStorage.getItem(dobCorrection(dob));
         tel.value = localStorage.getItem('phone');
         address.value = localStorage.getItem('address');
         location.value = localStorage.getItem('city');
@@ -322,10 +332,14 @@ window.onload = function(){
             address.parentNode.insertBefore(alert5, address.nextElementSibling);
             arrayInput[5] = "Address: You can't star/finish with a withe spaces";
             return false
+        }else if(spaceValidation(address.value) == 0){
+            address.classList.add("red-border");
+            address.parentNode.insertBefore(alert5, address.nextElementSibling);
+            arrayInput[5] = 'Address: Need a space between letter and numbers';
+            return false
         }else{
             address.classList.add("green-border");
             arrayInput[5] = 'Address: Successful';
-
             return true
         }
         }
@@ -341,7 +355,7 @@ window.onload = function(){
     if (location.value.length < 3){
         location.classList.add("red-border");
         location.parentNode.insertBefore(alert6, location.nextElementSibling);
-        arrayInput[6] = 'Location: need more characters';
+        arrayInput[6] = 'Locationneed more characters';
         return false
     }else if(letNumValidation(location.value) == false){
         location.classList.add("red-border");
@@ -422,23 +436,18 @@ window.onload = function(){
      //PASSWORD 1
     pw1.onblur = function (){
         if (pw1.value.length < 8){
-            console.log('hola3')
-
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Password: Need more characters';
             return false;
 
         }else if (letterNumberValidation(pw1.value) == false ){
-            console.log('hola')
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Passwrod: Invalid password';
             return false;
         }
         else if (numCount==0 || upper==0 || lower==0){
-            console.log(numCount+' ,'+upper+' ,'+lower)
-
             pw1.classList.add("red-border");
             pw1.parentNode.insertBefore(alert9, pw1.nextElementSibling);
             arrayInput[9] = 'Password: Invalid password';
@@ -506,7 +515,7 @@ window.onload = function(){
         var resultPass2 = pw2.onblur (pw2.value);
         if (resultName && resultlName  && resultId && resultDob && resultTel &&resultAddress && resultLoc && resultZip
             && resultPass2 && resultPass1 && resultEmail ){
-            alert('Welcome to Trackgenix :\n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
+            alert('Welcome to Trackgenix: \n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
             + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
             + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
             + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
@@ -519,6 +528,7 @@ window.onload = function(){
             + arrayInput[10]);
         }
     }
+    localStorage.clear()
     if (localStorage.length != 0){
         getStorage ();
     }
