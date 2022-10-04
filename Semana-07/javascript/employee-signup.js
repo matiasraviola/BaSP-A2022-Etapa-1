@@ -137,6 +137,7 @@ window.onload = function(){
                     alert('Succeful: '+ data.msg+'\n'+ fName +' :'+arrayInput[0]+'\n'+ lName +' :'+ arrayInput[1]+'\n'+ id +' :'+ arrayInput[2]+'\n'+ dob +' :'+ arrayInput[3]+'\n'
                     + tel +' :'+ arrayInput[4]+'\n'+ address +' :'+ arrayInput[5]+'\n'+ location +' :'+ arrayInput[6]+'\n'+ zip +' :'+ arrayInput[7]+'\n'+ email +' :'+ arrayInput[8]+'\n'+ pw1 +' :'+ arrayInput[9]+'\n'
                     + pw2 +' :'+ arrayInput[10]);
+                    dataStorage();
                 }else{
                     alert('Error: ' + data.msg+'\n'+ fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
                     + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
@@ -148,6 +149,37 @@ window.onload = function(){
                 console.log(error);
             })
         }
+        //date correction
+    var dobCorrection = function  (dob){
+        var arrayDob = dob.split('-');
+        return arrayDob[1]+'/'+arrayDob[2]+'/'+arrayDob[0];
+    }
+    //Local Storage
+    function dataStorage (){
+        localStorage.setItem('name', fName.value);
+        localStorage.setItem('lastName', lName.value);
+        localStorage.setItem('dni', id.value);
+        localStorage.setItem('dob', dob.value);
+        localStorage.setItem('phone', tel.value);
+        localStorage.setItem('address', address.value);
+        localStorage.setItem('city', location.value);
+        localStorage.setItem('zip', zip.value);
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('password', pw1.value);
+    }
+    function getStorage (){
+        fName.value = localStorage.getItem('name');
+        lName.value = localStorage.getItem('lastName');
+        id.value = localStorage.getItem('dni');
+        dob.value = localStorage.getItem('dob');
+        tel.value = localStorage.getItem('phone');
+        address.value = localStorage.getItem('address');
+        location.value = localStorage.getItem('city');
+        zip.value = localStorage.getItem('zip');
+        email.value = localStorage.getItem('email');
+        pw1.value = localStorage.getItem('password');
+        pw2.value = localStorage.getItem('password');
+    }
         //NAME
     fName.onblur = function(){
         if(fName.value.length < 4){
@@ -474,20 +506,20 @@ window.onload = function(){
         var resultPass2 = pw2.onblur (pw2.value);
         if (resultName && resultlName  && resultId && resultDob && resultTel &&resultAddress && resultLoc && resultZip
             && resultPass2 && resultPass1 && resultEmail ){
-            alert('Welcome to Trackgenix :\n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'+ id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'
-            + tel.value +' '+ arrayInput[4]+'\n'+ address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '+ arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
+            alert('Welcome to Trackgenix :\n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
+            + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
+            + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
+            + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
             + pw2.value +' '+ arrayInput[10]);
-            request(fName.value,lName.value,id.value,dob.value,tel.value,address.value,location.value,zip.value,email.value, pw1.value,);
+            request(fName.value,lName.value,id.value,dob.value,tel.value,address.value,location.value,zip.value,
+            email.value, pw1.value,pw2.value);
         }else{
             alert('Something goes wrong: ' + arrayInput[0]+'\n' + arrayInput[1]+'\n'+ arrayInput[2]+'\n'+ arrayInput[3]+'\n'
             + arrayInput[4]+'\n'+ arrayInput[5]+'\n'+ arrayInput[6]+'\n'+ arrayInput[7]+'\n'+ arrayInput[8]+'\n'+ arrayInput[9]+'\n'
             + arrayInput[10]);
         }
     }
-}
-
-    //date correction
-    var dobCorrection = function  (dob){
-        var arrayDob = dob.split('-');
-        return arrayDob[1]+'/'+arrayDob[2]+'/'+arrayDob[0];
+    if (localStorage.length != 0){
+        getStorage ();
     }
+}
