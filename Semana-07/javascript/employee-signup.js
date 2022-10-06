@@ -177,6 +177,31 @@ window.onload = function(){
             span.parentNode.insertBefore(modalMsg, span.nextElementSibling);
         }
    }
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on the button, open the modal
+   function alertModalVal (){
+        var modalMsg = document.createElement('p');
+        modalMsg.innerHTML = 'Welcome to Trackgenix: \n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
+        + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
+        + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
+        + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
+        + pw2.value +' '+ arrayInput[10];
+        span.parentNode.insertBefore(modalMsg, span.nextElementSibling);
+   }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
     //date correction
     var dobCorrection = function(dob){
         var arrayDob = dob.split('-');
@@ -550,37 +575,6 @@ window.onload = function(){
             modal.style.display = "block";
             alertModalVal();
         }
-    }
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    // var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-   function alertModalVal (){
-        var modalMsg = document.createElement('p');
-        modalMsg.innerHTML = 'Welcome to Trackgenix: \n' + fName.value +' '+arrayInput[0]+'\n'+ lName.value +' '+ arrayInput[1]+'\n'
-        + id.value +' '+ arrayInput[2]+'\n'+ dob.value +' '+ arrayInput[3]+'\n'+ tel.value +' '+ arrayInput[4]+'\n'
-        + address.value +' '+ arrayInput[5]+'\n'+ location.value +' '+ arrayInput[6]+'\n'+ zip.value +' '
-        + arrayInput[7]+'\n'+ email.value +' '+ arrayInput[8]+'\n'+ pw1.value +' '+ arrayInput[9]+'\n'
-        + pw2.value +' '+ arrayInput[10];
-        span.parentNode.insertBefore(modalMsg, span.nextElementSibling);
-   }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
     }
     localStorage.clear()
     if (localStorage.length != 0){
